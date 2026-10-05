@@ -1,0 +1,19 @@
+name,category,anchor,lat,lon,supply_lbs,avail_prob,supply_cv,cold_frac
+Hunts Point Produce Market,Wholesale,1,40.8085,-73.8800,9000,0.97,0.15,0.90
+Baldor Specialty Foods,Wholesale,1,40.8128,-73.8813,7000,0.95,0.18,0.80
+FreshDirect,Supermarket,1,40.8042,-73.9097,6500,0.93,0.20,0.60
+Amazon (LIC),Corporate,1,40.7440,-73.9490,9000,0.90,0.25,0.40
+Whole Foods (Bowery),Supermarket,1,40.7237,-73.9920,3000,0.92,0.25,0.55
+Whole Foods (Columbus Circle),Supermarket,1,40.7681,-73.9829,3000,0.92,0.25,0.55
+Trader Joe's (Union Sq),Supermarket,1,40.7338,-73.9893,2500,0.90,0.25,0.50
+Trader Joe's (Cobble Hill),Supermarket,1,40.6884,-73.9924,2500,0.90,0.25,0.50
+Costco (Brooklyn),Supermarket,1,40.6776,-73.9956,3000,0.88,0.30,0.55
+BJ's (Bronx),Supermarket,0,40.8230,-73.8500,2000,0.80,0.35,0.55
+Tom Cat Bakery (LIC),Bakery,0,40.7390,-73.9360,1200,0.78,0.40,0.10
+4C Foods (Brooklyn),Manufacturer,0,40.6550,-73.8950,1500,0.75,0.40,0.20
+Bimbo Bakeries,Bakery,0,40.8100,-73.9200,1000,0.70,0.45,0.10
+Blind donor - Queens,Mixed,0,40.7300,-73.8000,900,0.50,0.70,0.45
+Blind donor - Bronx,Mixed,0,40.8500,-73.8800,800,0.50,0.70,0.45
+Blind donor - Brooklyn,Mixed,0,40.6400,-73.9500,900,0.50,0.70,0.45
+Blind donor - Manhattan,Mixed,0,40.8000,-73.9500,700,0.45,0.75,0.45
+Blind donor - Staten Island,Mixed,0,40.5800,-74.1200,600,0.40,0.80,0.45

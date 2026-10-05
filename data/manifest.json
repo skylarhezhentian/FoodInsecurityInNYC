@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "description": "Preserved study inputs and saved results; operational quantities are research scenario assumptions, not measured organization operations.",
+  "files": [
+    {
+      "path": "study/replicates.json",
+      "source_file": "4_replicates_raw.json",
+      "bytes": 139446,
+      "sha256": "f08f3f5f96893473653abebc699515f7fc288d7ad9258b23fe3d8914d66d4205",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "study/recipients.csv",
+      "source_file": "5_recipients.csv",
+      "bytes": 24231,
+      "sha256": "6f0950c8bb73befaece67361a9d8abdffce8e28d4b601d1b2529048e93b90f7e",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "model/instance.json",
+      "source_file": "laidlaw-vrptw/instance_ch.json",
+      "bytes": 407040,
+      "sha256": "280d7925fd1e9853ae587f93460bc368561f921019cea52406f826f8856e75ff",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "model/donors.csv",
+      "source_file": "laidlaw-vrptw/data/donors_pickup.csv",
+      "bytes": 1319,
+      "sha256": "93f99f22488969f12cde13de0a5ea2200bba9b735040aaadf98c9ce59389d262",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "model/travel.npz",
+      "source_file": "laidlaw-vrptw/osrm_cache_pickup.npz",
+      "bytes": 2041011,
+      "sha256": "3f356c00ceb06a8e6c398b0d7ad2956fe87c1e1411958f389cda4b2f6ae9c2d8",
+      "transformation": "none; byte-for-byte copy"
+    }
+  ],
+  "node_order": {
+    "path": "model/nodes.json",
+    "bytes": 105312,
+    "sha256": "27ab72af10da6e6667b1d8140276a700c19f8f2512fd3dd777b7fdb89cae5441",
+    "status": "declared current input order; historical cache alignment is assumed, not independently certified"
+  },
+  "relationships": {
+    "replicates_equals_original_replicates_json": true,
+    "recipient_indices": "zero-based positions in instance.json pantries",
+    "saved_reference_weights": "recipients.csv w_gamma1 equals the clipped gamma=1 ratio recomputed from rounded stored percentiles; use these weights for saved-result reanalysis",
+    "missing_equity_join": {
+      "recipient_idx": 95,
+      "nta": "BK0261",
+      "need_pct": 0.5,
+      "access_pct": 0.5,
+      "need_tier": "low",
+      "status": "historical builder fallback, not observed neighborhood need"
+    },
+    "travel_cache": "two finite, nonnegative 548-by-548 numeric arrays with zero diagonals; no original node identity, coordinates, or acquisition timestamp embedded"
+  }
+}

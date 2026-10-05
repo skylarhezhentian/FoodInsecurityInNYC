@@ -1,49 +1,99 @@
-# Food-rescue routing toolkit (v0)
+# Equity-aware food rescue in New York City
 
-Turns your spatial analysis into a runnable, equity-aware routing instance and a first solve.
-The pipeline is: **`cd_summary.csv` + `donor_classes.csv` → `build_instance.py` → `instance.json` → `solve_rescue.py` → routes + `route_demo.png`.**
+[![Reproduce and test](https://github.com/skylarhezhentian/FoodInsecurityInNYC/actions/workflows/tests.yml/badge.svg)](https://github.com/skylarhezhentian/FoodInsecurityInNYC/actions/workflows/tests.yml)
 
-## Files
+Food-rescue routes can reach many sites while leaving high-need neighborhoods
+underserved. This Laidlaw research project asks how route priorities change the
+balance between broad coverage, neighborhood need, and access to existing food
+providers.
 
-- `donor_classes.csv` — City Harvest’s donor categories mapped to product class, cold-chain flag (ρ), shelf-life range (L_p), and supply behaviour (mean lbs, variability, availability). This is your parameter spec.
-- `cd_summary.csv` — your 59 community districts (need, access, providers, terciles).
-- `build_instance.py` — assembles depot + donor nodes (pickups) + recipient nodes (deliveries) with equity weights `w_r = (need_t+1)/(access_t+1)`. Writes `instance.json`.
-- `solve_rescue.py` — deterministic single-commodity solve with OR-Tools; equity enters as a skip-penalty; compares uniform vs equity modes and plots routes.
-- `instance.json`, `route_demo.png` — generated artifacts.
+The project combines public NYC geography and neighborhood indicators with an
+OR-Tools vehicle-routing model. Five policies share the same recipient demand,
+fleet, travel estimates, time windows, and refrigerated-cargo constraints. The
+included scenario has **528 recipient sites, 18 donor candidates, two depots,
+and 25 vehicles**.
 
-## Quickstart
+## Example results
+
+In the corrected comparison, need/access priorities gave the highest median
+high-need coverage; access-only priorities reached the most sites. Both used
+more total route time than the unweighted baseline. The table shows medians
+across five small penalty perturbations per policy.
+
+| Policy | Sites served | High-need demand covered |
+| --- | ---: | ---: |
+| Unweighted | 95 | 7.0% |
+| Random preference | 109 | 10.8% |
+| Need only | 92 | 28.8% |
+| Access only | 171 | 22.5% |
+| Need / access | 160 | 39.3% |
+
+High-need coverage is demand-weighted within the 240 sites carrying the supplied
+high-need label. The ranges below show sensitivity to the small perturbations and
+bounded search; they are not confidence intervals or evidence of a universal
+policy ranking.
+
+![Sites served and high-need coverage across the five policies](docs/assets/policy_comparison.png)
+
+These are modeled allocations, not observed deliveries or estimates of reduced
+food insecurity. Search is time-limited; another run can find different routes.
+All 25 saved solves include their full routes, inputs, settings, and checks in
+[results/corrected](results/corrected). See [full results and timing](docs/results.md)
+and the [methods](docs/methodology.md) for the objective, metrics, and assumptions.
+
+## Run it
+
+Use Python 3.11. All inputs for the documented commands are included; no API key
+or data download is needed.
 
 ```bash
-pip install ortools pandas numpy matplotlib
-python build_instance.py                 # -> instance.json (1,460 donors, 528 recipients)
-python solve_rescue.py --boro 3 --vehicles 2 --horizon 300 --max-recip 40
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python scripts/verify_benchmark.py
+python scripts/run_routing_demo.py
 ```
 
-## The v0 model
+The first script independently rebuilds the saved results from every route,
+without running the optimizer. The second solves a small, three-policy example
+and checks timing, capacities, and cargo conservation.
 
-One commodity (total lbs). Vehicles leave the depot, **pick up** at donors (load +) and **deliver** to recipients (load −), within time windows and vehicle capacity. The load dimension can’t go negative, so deliveries can’t precede pickups. Equity is a **skip penalty**: serving recipient *r* is worth `BASE × w_r`, so high-need/low-access districts are expensive to leave unserved. Two modes run on the same subset — `uniform` (equal penalties) vs `equity` (penalty ∝ w_r).
+To reproduce the earlier 55-run study tables, run
+`python scripts/reproduce_results.py`. To run the full new comparison, use
+`python scripts/run_benchmark.py` (25 solves, each with a 10-second search limit).
+See the [run guide](docs/reproduce.md) for figures, tests, outputs, and Windows
+setup.
 
-## What the demo shows (Brooklyn, 2 vehicles, 5-hour shift, 40 recipients)
+## Repository guide
 
-|                             |uniform|equity |
-|-----------------------------|-------|-------|
-|recipients served            |24/40  |19/40  |
-|**priority districts served**|**1/6**|**5/6**|
-|travel (min)                 |570    |525    |
+| Folder | Contents |
+| --- | --- |
+| `src/food_rescue/` | Current routing model, route audit, and saved-study analysis. |
+| `scripts/` | Commands to solve, replay results, reproduce tables, and draw the figure. |
+| `data/` | Included model inputs, original saved study, schemas, sources, and file hashes. |
+| `configs/` | Fixed settings for the corrected five-policy comparison. |
+| `results/corrected/` | All 25 new route records, summaries, and verification evidence. |
+| `docs/` | Methods, experiment protocol, reproduction guide, and figures. |
+| `tests/` | Data integrity, accounting, feasibility, and saved-result regression tests. |
+| `research/historical/` | Recovered original source, retained with its limitations. |
 
-Equity reallocates a scarce fleet toward the priority (high-need, low-access) districts — fewer recipients overall, but the underserved get reached. That throughput-vs-priority gap is your first empirical slice of the efficiency–equity trade-off. See `route_demo.png`.
+## Data and research limits
 
-## What is real vs placeholder (replace as you go)
+Locations and neighborhood indicators come from public sources. Supply, demand,
+fleet, and cold-share quantities are scenario assumptions. The cached travel
+estimates may include distance-based fallbacks, and their historical coordinate
+alignment cannot be independently certified. [Data provenance](data/README.md)
+records these limits and the source attribution.
 
-- **Geography is synthetic** except the depot (150 52nd St, Brooklyn), Hunts Point, and the GrowNYC markets. Swap in your real 528-provider coordinates: `python build_instance.py --providers my_providers.csv` (columns: `lon,lat[,w][,demand_lbs][,boro]`). Geocode donors from the City Harvest list, OSM/Overpass, or DOHMH.
-- **Time windows** are placeholders — replace with real provider open-hours and donor availability.
-- **Supply/demand lbs** are heuristic — calibrate to City Harvest volume (~90M lbs/yr) and pantry throughput.
-- **Distances** are haversine — swap in OSRM road travel times.
-- **Product classes / perishability / cold-chain** live in `donor_classes.csv` but the v0 solver aggregates to total lbs.
+The earlier full-study solver omitted service time and allowed inconsistent
+cold/ambient inventory. Its 55 saved outputs remain available for
+[accounting reproduction](docs/historical_results.md). The current model corrects
+those constraints and changes initial cold staging; the two sets of results
+describe different scenarios.
 
-## Roadmap to the full formulation
+## Acknowledgments
 
-- **v1:** real geo; multi-product with a cold-chain fleet (split capacity, refrigerated vehicles only carry ρ=1 products); add a freshness term using shelf life + an age-decay value φ_p.
-- **v2:** two-stage stochastic donations — sample supply scenarios from each donor’s `avail_prob` and `supply_cv`, commit routes first-stage, re-allocate deliveries as recourse, and average over scenarios (SAA). OR-Tools is ideal for the deterministic/heuristic core; pair it with an SAA wrapper, or move to a MIP/branch-price-and-cut for exact stochastic results.
+Skylar Tian · Columbia University · Laidlaw Undergraduate Research and Leadership
+Program. Faculty mentor: George Dragomir.
 
-*This is a synthetic instance for validating the pipeline and the equity mechanism — not a model of actual City Harvest operations.*
+Travel estimates use OSRM and © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright).

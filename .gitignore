@@ -1,0 +1,28 @@
+# Local runtimes and credentials
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.DS_Store
+
+# Generated analyses, routes, and figures
+outputs/
+.matplotlib/
+research/historical/*.npz
+research/historical/*.png
+research/historical/*.csv
+research/historical/*.md
+!research/historical/README.md
+research/historical/*_solution.json
+research/historical/ch_experiment.json
+research/historical/replicates.json
+research/historical/pareto_frontier.json
+
+# Optional historical inputs are supplied explicitly, not tracked twice.
+research/historical/instance_ch.json
+research/historical/data/

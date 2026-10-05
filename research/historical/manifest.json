@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "status": "source snapshot recovered alongside saved study outputs; no source revision/hash was recorded in the original saved run, so exact generating-source identity is unverified",
+  "files": [
+    {
+      "path": "replicates.py",
+      "source_file": "laidlaw-vrptw/replicates.py",
+      "original_sha256": "630409ae7a7ce23059e70478b6e39763944212526e1f431885e516f02e4ddced",
+      "packaged_sha256": "630409ae7a7ce23059e70478b6e39763944212526e1f431885e516f02e4ddced",
+      "bytes": 6963,
+      "changes": []
+    },
+    {
+      "path": "ch_experiment.py",
+      "source_file": "laidlaw-vrptw/ch_experiment.py",
+      "original_sha256": "dfd9a744272a4c4d4d518e51e2e8da88ea5d45c0e68cc1422ed41ab5e0465ab2",
+      "packaged_sha256": "dfd9a744272a4c4d4d518e51e2e8da88ea5d45c0e68cc1422ed41ab5e0465ab2",
+      "bytes": 36585,
+      "changes": []
+    },
+    {
+      "path": "pickup_model.py",
+      "source_file": "laidlaw-vrptw/pickup_model.py",
+      "original_sha256": "7b07dbbb3d3b2a7575ab5aa11e305547bf633dda37e2011a1352bfcdefa4658d",
+      "packaged_sha256": "7b07dbbb3d3b2a7575ab5aa11e305547bf633dda37e2011a1352bfcdefa4658d",
+      "bytes": 19293,
+      "changes": []
+    },
+    {
+      "path": "pareto_frontier.py",
+      "source_file": "laidlaw-vrptw/pareto_frontier.py",
+      "original_sha256": "7bdffccc3ad2b80343ed3600c5ed5f0004dd10adac8af5aeaab6095e31eb6d6f",
+      "packaged_sha256": "7bdffccc3ad2b80343ed3600c5ed5f0004dd10adac8af5aeaab6095e31eb6d6f",
+      "bytes": 5138,
+      "changes": []
+    },
+    {
+      "path": "geo_travel.py",
+      "source_file": "laidlaw-vrptw/geo_travel.py",
+      "original_sha256": "679debd31de970d899035c33e1a04d2668f16994aa0ed1267360051de4305b34",
+      "packaged_sha256": "679debd31de970d899035c33e1a04d2668f16994aa0ed1267360051de4305b34",
+      "bytes": 7935,
+      "changes": []
+    },
+    {
+      "path": "solve_routes_v1.py",
+      "source_file": "laidlaw-vrptw/solve_routes_v1.py",
+      "original_sha256": "eeb7531b2932305ec378361fcc11a1f24e57554a68778f0d6a704a61fe2e8dbb",
+      "packaged_sha256": "a6e8f87ccb6ec6eb0aa464dd86679e1feb40a15e593aa3f8be6b3724fcf2fa5e",
+      "bytes": 20123,
+      "changes": [
+        "Optional borough-basemap default changed from a machine-specific absolute path to research/historical/data/nyc_boroughs.geojson. Basemap data are not included; solver calculations are unchanged."
+      ]
+    }
+  ]
+}

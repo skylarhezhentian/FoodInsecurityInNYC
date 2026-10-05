@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "description": "Fixed exploratory comparison after route-feasibility corrections; specified before running the corrected model.",
+  "model_data": "data/model",
+  "recipient_data": "data/study/recipients.csv",
+  "policies": ["unweighted", "random_preference", "need_only", "access_only", "equity"],
+  "replicate_seeds": [1, 2, 3, 4, 5],
+  "recipient_limit": null,
+  "vehicle_limit": null,
+  "traffic_factor": 0.38,
+  "routing": {
+    "time_limit_seconds": 10,
+    "staged_fraction": 0.4,
+    "staged_cold_fraction": 0.55,
+    "skip_penalty": 8000,
+    "freshness_coefficient": 1,
+    "decay_coefficient": 0.03,
+    "preference_seed": 42,
+    "jitter_fraction": 0.002
+  },
+  "primary_metrics": ["sites_served", "high_need_coverage_pct"],
+  "secondary_metrics": ["reference_weighted_coverage_pct", "driving_min", "service_min", "waiting_min", "elapsed_min"],
+  "summaries": "Median and observed min/max across five penalty perturbations; these ranges are not confidence intervals.",
+  "failure_policy": "Retain each solver status and audit result. Do not summarize failed or invalid runs as zero service or silently omit them.",
+  "scope": "Single modeled day; fixed demands and expected donations; heuristic, time-limited solutions; no optimality or operational outcome claim."
+}
