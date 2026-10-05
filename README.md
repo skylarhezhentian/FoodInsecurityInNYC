@@ -1,28 +1,41 @@
-# Equity-aware food rescue in New York City
+# NYC Food Insecurity and Food Rescue
 
 [![Reproduce and test](https://github.com/skylarhezhentian/FoodInsecurityInNYC/actions/workflows/tests.yml/badge.svg)](https://github.com/skylarhezhentian/FoodInsecurityInNYC/actions/workflows/tests.yml)
 
+**Laidlaw research at Columbia University · Skylar Tian**
+
 Food-rescue routes can reach many sites while leaving high-need neighborhoods
-underserved. This Laidlaw research project asks how route priorities change the
-balance between broad coverage, neighborhood need, and access to existing food
-providers.
+underserved. This project studies where food access is limited in New York City
+and how a constrained delivery fleet could balance broad coverage with
+neighborhood need.
 
-The project combines public NYC geography and neighborhood indicators with an
-OR-Tools vehicle-routing model. Five policies share the same recipient demand,
-fleet, travel estimates, time windows, and refrigerated-cargo constraints. The
-included scenario has **528 recipient sites, 18 donor candidates, two depots,
-and 25 vehicles**.
+The research combines public provider records, neighborhood geography, and
+food-insecurity indicators to measure access, build a delivery scenario, and
+compare routing priorities with OR-Tools. This repository brings together the
+data preparation, donor-supply exploration, routing experiments, Laidlaw poster,
+and subsequent model corrections. The included routing scenario has **528
+recipient sites, 18 donor candidates, two depots, and 25 vehicles**.
 
-## Poster and research trail
+[Poster](poster/Skylar_Tian_Laidlaw_Poster.pdf) ·
+[Research walkthrough](research/README.md) ·
+[Run the project](docs/reproduce.md) ·
+[Data and sources](data/README.md)
 
-Read the [Laidlaw symposium poster](poster/Skylar_Tian_Laidlaw_Poster.pdf) or
-follow the [source-data-to-poster guide](poster/README.md). The archive includes
-data preparation, access calculations, donor modeling, earlier experiments,
-the final 55 saved study runs, figure code, manuscript drafts, and the recovered
-poster source. The poster reports the original study; the results below use the
-later corrected routing model.
+## From neighborhood analysis to routing
 
-## Example results
+| Stage | Work and outputs |
+| --- | --- |
+| Understand need and access | [Public-data preparation and access maps](research/preprocessing/README.md), including a population-based accessibility measure across 197 residential neighborhoods. |
+| Build the scenario | [Recipient joins, demand, delivery windows, and fleet assumptions](research/experiments/README.md#rebuild-the-final-instance). Donor-volume estimates are supporting research; the final pickup quantities are scenario assumptions. |
+| Compare allocation policies | [Model development and experiments](research/experiments/README.md): prototypes, five-policy comparisons, an equity-weight sweep, and robustness and distributional analyses. |
+| Present the Laidlaw study | [55 saved runs](data/study/replicates.json), [reproduced figures and tables](results/poster/), the [working paper](research/writing/README.md), and [poster with layout source](poster/README.md). |
+| Correct and validate the model | [Current routing model](src/food_rescue/routing.py) and [25 saved solves](results/corrected/), with service-time and cargo constraints checked by independently replaying every route. |
+
+The poster records the original study. The current benchmark is a later stage
+of the same project, with corrected constraints and different initial cold
+staging. Their results remain labeled by model version.
+
+## Current routing results
 
 In the corrected comparison, need/access priorities gave the highest median
 high-need coverage; access-only priorities reached the most sites. Both used
@@ -56,36 +69,37 @@ Use Python 3.11. All inputs for the documented commands are included; no API key
 or data download is needed.
 
 ```bash
-python3 -m venv .venv
+python3.11 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
+python scripts/reproduce_results.py
+python scripts/reproduce_poster_figures.py
+python scripts/verify_poster_archive.py
 python scripts/verify_benchmark.py
-python scripts/run_routing_demo.py
 ```
 
-The first script independently rebuilds the saved results from every route,
-without running the optimizer. The second solves a small, three-policy example
-and checks timing, capacities, and cargo conservation.
+These commands reproduce the original study tables and poster figures, then
+independently check all saved corrected routes. They do not run the optimizer.
 
-To reproduce the earlier 55-run study tables, run
-`python scripts/reproduce_results.py`. To run the full new comparison, use
-`python scripts/run_benchmark.py` (25 solves, each with a 10-second search limit).
-See the [run guide](docs/reproduce.md) for figures, tests, outputs, and Windows
-setup.
+Use `python scripts/run_routing_demo.py` for a small new routing example.
+The [run guide](docs/reproduce.md) covers the complete research sequence,
+including the earlier maps and donor estimates in a separate Python 3.12
+environment, instance reconstruction, and the full corrected benchmark.
 
 ## Repository guide
 
 | Folder | Contents |
 | --- | --- |
 | `src/food_rescue/` | Current routing model, route audit, and saved-study analysis. |
-| `scripts/` | Commands to solve, replay results, reproduce tables, and draw the figure. |
+| `scripts/` | Entry points for data preparation, result replay, figures, routing, and integrity checks. |
 | `data/` | Public source snapshots, intermediate tables, model inputs, original saved study, and provenance. |
 | `configs/` | Fixed settings for the corrected five-policy comparison. |
+| `research/` | Research walkthrough, preprocessing, historical solvers, experiment development, and working-paper drafts. |
+| `poster/` | Original Laidlaw poster PDF, recovered layout source, references, and figure-to-evidence guide. |
+| `results/poster/` | Reproduced original-study figures, tables, and validation records. |
 | `results/corrected/` | All 25 new route records, summaries, and verification evidence. |
 | `docs/` | Methods, experiment protocol, reproduction guide, and figures. |
 | `tests/` | Data integrity, accounting, feasibility, and saved-result regression tests. |
-| `poster/` | Original poster PDF, recovered layout source, references, and evidence guide. |
-| `research/` | Preprocessing, historical solvers, earlier experiments, and working-paper drafts. |
 
 ## Data and research limits
 

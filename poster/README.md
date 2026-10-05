@@ -1,31 +1,19 @@
-# From source data to the Laidlaw poster
+# Laidlaw poster and supporting evidence
 
-[Open the symposium poster](Skylar_Tian_Laidlaw_Poster.pdf).
+[Project overview](../README.md) · [Research walkthrough](../research/README.md) ·
+[Run the project](../docs/reproduce.md) ·
+[Open the symposium poster](Skylar_Tian_Laidlaw_Poster.pdf)
 
-This archive follows the work behind **Allocation Under Scarce Capacity:
-Equity-Aware Routing for Urban Food Rescue in New York City**. It includes the
-public-data snapshots, preprocessing, model development, saved experiments,
-figure code, working paper, and recovered poster source. The supplied PDF is
-preserved unchanged.
+**Allocation Under Scarce Capacity: Equity-Aware Routing for Urban Food Rescue
+in New York City** presents the original study within the
+NYC Food Insecurity and Food Rescue project. This guide connects the poster to
+its figures, tables, and source files. The supplied PDF is preserved unchanged.
 
-## Research sequence
-
-| Stage | Files to start with | What it contributes |
-| --- | --- | --- |
-| Public-data collection | [Source snapshots](../data/upstream/) and [preprocessing guide](../research/preprocessing/README.md) | Food Help locations and schedules, neighborhood food-insecurity estimates, Census population, and geographic boundaries. |
-| Need and access measures | [Food-access calculations](../research/preprocessing/foodhelp/analysis/) | Early community-district and NTA analyses, followed by the population-based E2SFCA access score and NTA equity table. |
-| Donation-supply exploration | [Donor model](../research/preprocessing/donor_model/) | Public donor anchors, estimation assumptions, reconciliation, and saved outputs. This is background research; the routing donors remain a labeled scenario. |
-| Routing instance | [Instance builders](../research/experiments/builders/) and [scenario inputs](../research/experiments/scenarios/) | Recipient joins, demands, delivery windows, depots, fleet, and donor assumptions. The retained final instance is in [data/model](../data/model/). |
-| Model development | [Earlier experiments](../research/experiments/README.md) and [historical solver](../research/historical/) | Prototype routes, five-policy comparison, depot checks, gamma sweep, robustness, and distributional analyses. These retain their original model behavior. |
-| Final poster study | [55 saved runs](../data/study/replicates.json), [recipient table](../data/study/recipients.csv), and [replicate harness](../research/historical/replicates.py) | Five perturbations for each of 11 settings. These are the records behind the poster's strategy table and equity-dial figure. |
-| Writing and presentation | [Working paper](../research/writing/README.md), [poster source](source/README.md), and [reference guide](references.md) | The earlier manuscript, LaTeX layout, original figure assets, bibliography, logos, and template attribution. |
-
-The upstream archive includes both original snapshots and their saved derived
-tables. Acquisition dates and exact historical code revisions were not recorded
-for every file. The generic scraper is retained as a template, not claimed as
-the proven source of the saved directory exports. Individual manifests identify
-unchanged copies, portable-path changes, and removal of unused contact or editor
-fields from public provider exports.
+Follow the [research walkthrough](../research/README.md) for the complete
+sequence from public-data preparation through model development, the poster,
+and the corrected routing benchmark. The [working-paper draft](../research/writing/README.md)
+and [recovered layout source](source/README.md) retain the earlier writing and
+presentation materials.
 
 ## Trace the poster's figures and table
 

@@ -1,22 +1,92 @@
 # Run the project
 
-Run these commands from the repository root. The included data are sufficient;
-the analysis and routing demo do not download data or contact an API.
+[Project overview](../README.md) · [Research walkthrough](../research/README.md) ·
+[Poster and evidence](../poster/README.md)
 
-## Install
+Run commands from the repository root. This guide covers the full project:
+public-data analysis, scenario construction, the original Laidlaw study, and
+the corrected routing model. All documented analysis inputs are included.
+Installing dependencies needs network access unless they are already available;
+replaying the included data needs no API key or download.
 
-Python 3.11 is used by the GitHub Actions workflow. The pinned packages also match
-the local Python 3.9.6 environment used to check the model.
+## Set up the analysis and routing environment
+
+Use Python 3.11, as in GitHub Actions:
 
 ```bash
-python3 -m venv .venv
+python3.11 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-On Windows, activate with `.venv\Scripts\activate` instead.
+On Windows, activate with `.venv\Scripts\activate` instead. The pinned packages
+also match the local Python 3.9.6 environment used to check the model.
 
-## Recompute the historical tables
+For a first pass through the saved research, run:
+
+```bash
+python scripts/reproduce_results.py
+python scripts/reproduce_poster_figures.py
+python scripts/verify_poster_archive.py
+python scripts/verify_benchmark.py
+```
+
+These check the original study, redraw the poster figures, verify the preserved
+research files, and replay the saved corrected routes. They do not run the
+optimizer. The stages below show how to reproduce each part in more detail.
+
+## 1. Reproduce neighborhood access and donor estimates
+
+This stage uses geospatial dependencies pinned for Python 3.12. Keep them in a
+separate environment within the same project:
+
+```bash
+deactivate
+python3.12 -m venv .venv-preprocessing
+source .venv-preprocessing/bin/activate
+python -m pip install -r research/preprocessing/requirements.txt
+python scripts/reproduce_upstream.py --output outputs/upstream
+```
+
+On Windows, use `.venv-preprocessing\Scripts\activate` for activation.
+The command runs eight programs across community-district maps, neighborhood
+maps, E2SFCA access calculations, and donor estimates. It compares four CSVs
+and the donor results JSON with the saved references, and checks that the
+51 archived input and source files stay unchanged. Read
+`outputs/upstream/validation.json` and `outputs/upstream/logs/` for the results.
+Use a new or empty output directory for each replay.
+
+The [preprocessing guide](../research/preprocessing/README.md) explains each
+calculation, recorded reproduction, and optional stage selection. Donor-volume
+estimates are supporting research; they are not a verified generator of the
+final routing donor scenario.
+
+Switch back to the main environment for the remaining stages:
+
+```bash
+deactivate
+source .venv/bin/activate
+```
+
+## 2. Reconstruct the delivery scenario
+
+```bash
+mkdir -p outputs
+python research/experiments/builders/build_instance_v1.py \
+  --origins research/experiments/scenarios/origins_ch.csv \
+  --window-mode ch_stat --shift-start 06:00 --horizon-min 840 \
+  --service-min 15 --donor-share 0.15 --vehicle-cap-lbs 2500 \
+  --out outputs/poster_instance_rebuilt.json
+```
+
+The builder uses Python's standard library. Its output has been verified as
+byte-identical to `data/model/instance.json`, containing 528 recipients, two
+depots, and 25 vehicles. GitHub Actions repeats that comparison. The
+[experiment guide](../research/experiments/README.md#rebuild-the-final-instance)
+records the source joins, fallback values, and scenario assumptions. The final
+18-donor table and cached travel estimates are also included in `data/model/`.
+
+## 3. Recompute the original study tables
 
 ```bash
 python scripts/reproduce_results.py
@@ -34,7 +104,28 @@ To select other copies of the same input schema or a separate output directory:
 python scripts/reproduce_results.py --data-dir data/study --output-dir outputs/study-copy
 ```
 
-## Run a small routing example
+## 4. Reproduce the poster figures and inspect its source
+
+```bash
+python scripts/reproduce_poster_figures.py
+python scripts/verify_poster_archive.py
+```
+
+The figure command writes two poster redraws, the strategy table, gamma-sweep
+data, all 528 priority-map points, an appendix decile figure, and a validation
+record under `outputs/poster_figures/`. It checks the saved-study summaries and
+selected earlier robustness and distributional calculations without running
+an optimizer. The archive check writes `outputs/poster/archive_verification.json`.
+
+The [poster guide](../poster/README.md) links each figure and table to its
+source. The original PDF and figure assets are preserved; portable redraws are
+not claimed to have identical pixels. For the original layout's LaTeX build
+requirements, see [the source guide](../poster/source/README.md). A
+byte-identical PDF rebuild has not been established.
+
+## 5. Explore and validate the corrected routing model
+
+### Small routing example
 
 ```bash
 python scripts/run_routing_demo.py
@@ -53,7 +144,7 @@ A different bounded example can be selected explicitly:
 python scripts/run_routing_demo.py --recipients 40 --vehicles 5 --time-limit 3 --output outputs/demo-40/routing_demo.json
 ```
 
-## Run the corrected benchmark
+### Saved results and full benchmark
 
 To check the included corrected results without running the optimizer:
 
@@ -92,23 +183,7 @@ therefore a new recorded experiment, not a promise of bitwise-identical routes o
 historical result recovery. These are modeled allocations for one scenario day,
 not estimates of real operational outcomes.
 
-## Poster research archive
-
-The poster has its own [research trail](../poster/README.md). With the same root
-requirements, redraw its analytical figures and check the preserved archive:
-
-```bash
-python scripts/reproduce_poster_figures.py
-python scripts/verify_poster_archive.py
-```
-
-Generated figures and archive checks go under `outputs/`. The original poster
-PDF and its source assets stay unchanged. Earlier map and donor-model stages
-use the separate Python 3.12 environment described in the
-[preprocessing guide](../research/preprocessing/README.md); the instance
-reconstruction command is in the [experiment guide](../research/experiments/README.md).
-
-## Test
+## Test the complete project
 
 ```bash
 python -m unittest discover -s tests -v
@@ -123,16 +198,28 @@ separate Python 3.12 job reproduces the upstream tables and reconstructs the
 original poster instance from the included source snapshots.
 It does not run the full research benchmark.
 
-## Files and outputs
+## Where to find the outputs
 
-See [the data guide](../data/README.md) for schemas, sources, and scenario
-assumptions. Inputs are checked into `data/`; generated outputs are ignored by
-Git. The scripts keep source inputs separate from their output directories.
+| Stage | Generated output |
+| --- | --- |
+| Neighborhood analysis and donor estimates | `outputs/upstream/`, including `validation.json` and logs |
+| Rebuilt routing instance | `outputs/poster_instance_rebuilt.json` |
+| Original study accounting | `outputs/study/` |
+| Poster redraws and numerical inputs | `outputs/poster_figures/` |
+| Archive integrity checks | `outputs/poster/archive_verification.json` |
+| Small corrected routing example | `outputs/demo/routing_demo.json` |
+| Corrected comparison figure | `outputs/figures/` |
+| New full benchmark, if requested | `outputs/benchmark/` |
 
-[The historical source snapshot](../research/historical/README.md) is retained
-for source review. It has its own original behavior and known limitations; it is
-not the default runnable model. Its 55-solve harness uses time-limited search, so
-even a deliberate rerun need not recover the saved historical routes.
+The corrected-result verifier writes `verification.json` beside whichever
+results directory it checks; by default this is `results/corrected/`. Original
+study records are in `data/study/`, reviewed poster redraws in `results/poster/`,
+and saved corrected routes in `results/corrected/`. These are successive stages
+of one project with distinct model assumptions.
+
+Generated `outputs/` files are ignored by Git. See [the data guide](../data/README.md)
+for sources, schemas, and scenario assumptions, and the
+[research walkthrough](../research/README.md) for the connection between stages.
 
 ## Optional historical rerun
 
