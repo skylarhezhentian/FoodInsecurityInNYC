@@ -13,6 +13,15 @@ fleet, travel estimates, time windows, and refrigerated-cargo constraints. The
 included scenario has **528 recipient sites, 18 donor candidates, two depots,
 and 25 vehicles**.
 
+## Poster and research trail
+
+Read the [Laidlaw symposium poster](poster/Skylar_Tian_Laidlaw_Poster.pdf) or
+follow the [source-data-to-poster guide](poster/README.md). The archive includes
+data preparation, access calculations, donor modeling, earlier experiments,
+the final 55 saved study runs, figure code, manuscript drafts, and the recovered
+poster source. The poster reports the original study; the results below use the
+later corrected routing model.
+
 ## Example results
 
 In the corrected comparison, need/access priorities gave the highest median
@@ -70,12 +79,13 @@ setup.
 | --- | --- |
 | `src/food_rescue/` | Current routing model, route audit, and saved-study analysis. |
 | `scripts/` | Commands to solve, replay results, reproduce tables, and draw the figure. |
-| `data/` | Included model inputs, original saved study, schemas, sources, and file hashes. |
+| `data/` | Public source snapshots, intermediate tables, model inputs, original saved study, and provenance. |
 | `configs/` | Fixed settings for the corrected five-policy comparison. |
 | `results/corrected/` | All 25 new route records, summaries, and verification evidence. |
 | `docs/` | Methods, experiment protocol, reproduction guide, and figures. |
 | `tests/` | Data integrity, accounting, feasibility, and saved-result regression tests. |
-| `research/historical/` | Recovered original source, retained with its limitations. |
+| `poster/` | Original poster PDF, recovered layout source, references, and evidence guide. |
+| `research/` | Preprocessing, historical solvers, earlier experiments, and working-paper drafts. |
 
 ## Data and research limits
 

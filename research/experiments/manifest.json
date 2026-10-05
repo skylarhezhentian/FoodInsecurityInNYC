@@ -1,0 +1,400 @@
+{
+  "schema_version": 1,
+  "source_label": "User-provided laidlaw-vrptw working directory",
+  "status": "Historical lineage archive; source algorithms and assertions are not all current-model validated. No original file was modified.",
+  "files": [
+    {
+      "path": "research/experiments/builders/build_instance.py",
+      "source_relative_path": "build_instance.py",
+      "original_sha256": "065ab6fe4524ef797f7b18f9cd13284bd030757f926f32197493537227fa2aa5",
+      "packaged_sha256": "90112480525853a6542118d3f915ec0a6f5835391d7fa2c7e836e499d7b0e383",
+      "original_bytes": 18975,
+      "packaged_bytes": 18997,
+      "changes": [
+        "Portable packaged input paths and default output path only; original algorithm retained."
+      ]
+    },
+    {
+      "path": "research/experiments/builders/build_instance_v1.py",
+      "source_relative_path": "build_instance_v1.py",
+      "original_sha256": "e505d7b7780f735b89f88f6cf96294e5f885510d10f103a9715f4db371854d1a",
+      "packaged_sha256": "3b76e2a22a0b930220cec1d4eabb3c0c3bce97260a91b576e08a921e3a392a4a",
+      "original_bytes": 20144,
+      "packaged_bytes": 20194,
+      "changes": [
+        "Portable packaged scenario paths and default output path only; original algorithm retained."
+      ]
+    },
+    {
+      "path": "research/experiments/scenarios/origins.csv",
+      "source_relative_path": "data/origins.csv",
+      "original_sha256": "2efad15f02007e5a7ea9e73c964026137fc2d9e2c92a25634d167a64986222cf",
+      "packaged_sha256": "2efad15f02007e5a7ea9e73c964026137fc2d9e2c92a25634d167a64986222cf",
+      "original_bytes": 533,
+      "packaged_bytes": 533,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/scenarios/origins_v1.csv",
+      "source_relative_path": "data/origins_v1.csv",
+      "original_sha256": "079c71048e8f0f49bf60e0f4e29ed1737d6174c4b97f78b78208e625d32324dd",
+      "packaged_sha256": "079c71048e8f0f49bf60e0f4e29ed1737d6174c4b97f78b78208e625d32324dd",
+      "original_bytes": 1283,
+      "packaged_bytes": 1283,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/scenarios/origins_ch.csv",
+      "source_relative_path": "data/origins_ch.csv",
+      "original_sha256": "16b1703274dc6c129cbb36e33e1951fa022db57775c182aba2dd2e8dfd6eef28",
+      "packaged_sha256": "16b1703274dc6c129cbb36e33e1951fa022db57775c182aba2dd2e8dfd6eef28",
+      "original_bytes": 281,
+      "packaged_bytes": 281,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/scenarios/donor_classes.csv",
+      "source_relative_path": "data/donor_classes.csv",
+      "original_sha256": "772d12a8c7d2ce9534421221bde4e108afd4633637b4d87e554bab58203b3fc6",
+      "packaged_sha256": "772d12a8c7d2ce9534421221bde4e108afd4633637b4d87e554bab58203b3fc6",
+      "original_bytes": 780,
+      "packaged_bytes": 780,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/prototypes/solve_routes.py",
+      "source_relative_path": "solve_routes.py",
+      "original_sha256": "8f9b1a0290c414cd4a2a4cc47cad717030f6b340b7905ff0f3c03eb7306e7bfd",
+      "packaged_sha256": "8f9b1a0290c414cd4a2a4cc47cad717030f6b340b7905ff0f3c03eb7306e7bfd",
+      "original_bytes": 22748,
+      "packaged_bytes": 22748,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/prototypes/compare_models.py",
+      "source_relative_path": "compare_models.py",
+      "original_sha256": "b40e5b8a5a567231f0534193c1b04ef5c7ac9b220079b69a52000878554bb060",
+      "packaged_sha256": "b40e5b8a5a567231f0534193c1b04ef5c7ac9b220079b69a52000878554bb060",
+      "original_bytes": 9667,
+      "packaged_bytes": 9667,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/prototypes/instance_v0.json",
+      "source_relative_path": "instance.json",
+      "original_sha256": "7369ebe60b3a9513d2b932e8a91ce8f1280567e83af35dd8abd66cda0da8cb50",
+      "packaged_sha256": "7369ebe60b3a9513d2b932e8a91ce8f1280567e83af35dd8abd66cda0da8cb50",
+      "original_bytes": 284776,
+      "packaged_bytes": 284776,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/prototypes/instance_v1.json",
+      "source_relative_path": "instance_v1.json",
+      "original_sha256": "2e80b33ffbb85dd5490d4a926633a2c9d63fcf17d3e82f2bf2019b5961598be0",
+      "packaged_sha256": "2e80b33ffbb85dd5490d4a926633a2c9d63fcf17d3e82f2bf2019b5961598be0",
+      "original_bytes": 395262,
+      "packaged_bytes": 395262,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/prototypes/routes_v0.json",
+      "source_relative_path": "routes.json",
+      "original_sha256": "577a10a93e5b10a25bcf0d9a3057017955b9296557f0699ea5964f9ffc56eb31",
+      "packaged_sha256": "577a10a93e5b10a25bcf0d9a3057017955b9296557f0699ea5964f9ffc56eb31",
+      "original_bytes": 35830,
+      "packaged_bytes": 35830,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/prototypes/routes_v1.json",
+      "source_relative_path": "routes_v1.json",
+      "original_sha256": "b2b346740d6e2bdc9e27887ef66e93057648896a9a8d5ed8eb30dd822fbf8df8",
+      "packaged_sha256": "b2b346740d6e2bdc9e27887ef66e93057648896a9a8d5ed8eb30dd822fbf8df8",
+      "original_bytes": 391418,
+      "packaged_bytes": 391418,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/prototypes/routes_v1_road.json",
+      "source_relative_path": "routes_v1_road.json",
+      "original_sha256": "10a073970bd3dbada23df3ac8e14c8028781091fbb263af138085fd805a8a6c3",
+      "packaged_sha256": "10a073970bd3dbada23df3ac8e14c8028781091fbb263af138085fd805a8a6c3",
+      "original_bytes": 410988,
+      "packaged_bytes": 410988,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/prototypes/routes_ch.json",
+      "source_relative_path": "routes_ch.json",
+      "original_sha256": "4f5e2b856355f84e0050817911b9b25d311c437b0306adb10d761131569796f2",
+      "packaged_sha256": "4f5e2b856355f84e0050817911b9b25d311c437b0306adb10d761131569796f2",
+      "original_bytes": 12081,
+      "packaged_bytes": 12081,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/prototypes/README_v0.md",
+      "source_relative_path": "README.md",
+      "original_sha256": "a652728a7c4165d2037492c0a34934ba4f68a1b23d3ab40dc6f05df03829b7e1",
+      "packaged_sha256": "a652728a7c4165d2037492c0a34934ba4f68a1b23d3ab40dc6f05df03829b7e1",
+      "original_bytes": 9772,
+      "packaged_bytes": 9772,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/prototypes/README_v1.md",
+      "source_relative_path": "README_v1.md",
+      "original_sha256": "c391f9adbdf3e121d3d80208496ce1fd8a1d9449b660be60aadfdcacf0e9b452",
+      "packaged_sha256": "c391f9adbdf3e121d3d80208496ce1fd8a1d9449b660be60aadfdcacf0e9b452",
+      "original_bytes": 7876,
+      "packaged_bytes": 7876,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/prototypes/BENCHMARKS.md",
+      "source_relative_path": "BENCHMARKS.md",
+      "original_sha256": "c5a9b98ae2a3be2589a98cb8d538286e831f801c041f35999f99cbf4f741b796",
+      "packaged_sha256": "c5a9b98ae2a3be2589a98cb8d538286e831f801c041f35999f99cbf4f741b796",
+      "original_bytes": 5345,
+      "packaged_bytes": 5345,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/prototypes/comparison_ch.md",
+      "source_relative_path": "comparison_ch.md",
+      "original_sha256": "b73f87ffbd4137dc4d94651a38a99286cda1007282101566c566f8b4d8f0bee8",
+      "packaged_sha256": "b73f87ffbd4137dc4d94651a38a99286cda1007282101566c566f8b4d8f0bee8",
+      "original_bytes": 565,
+      "packaged_bytes": 565,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/prototypes/validation_v1.md",
+      "source_relative_path": "validation_v1.md",
+      "original_sha256": "6382954f242f1e9b761211a8cabe145720357cba168daec4772dc523d57cd2c8",
+      "packaged_sha256": "6382954f242f1e9b761211a8cabe145720357cba168daec4772dc523d57cd2c8",
+      "original_bytes": 835,
+      "packaged_bytes": 835,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/prototypes/backend_audit.md",
+      "source_relative_path": "backend_audit.md",
+      "original_sha256": "4026df52252efdd726778f7228b8aec36fac7ea622b6a81b06aacfc0b7bf8bb7",
+      "packaged_sha256": "4026df52252efdd726778f7228b8aec36fac7ea622b6a81b06aacfc0b7bf8bb7",
+      "original_bytes": 1022,
+      "packaged_bytes": 1022,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/prototypes/validate_solution.py",
+      "source_relative_path": "validate_solution.py",
+      "original_sha256": "0f67e3ba116ee162e9897fc60435fe17558ad10e19018097e0a3ba00c7766158",
+      "packaged_sha256": "0f67e3ba116ee162e9897fc60435fe17558ad10e19018097e0a3ba00c7766158",
+      "original_bytes": 5865,
+      "packaged_bytes": 5865,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/prototypes/backend_audit.py",
+      "source_relative_path": "backend_audit.py",
+      "original_sha256": "760b2982cdb0f343d9a449daeadd73e7ac37adb088a08a416cc60ada0c367502",
+      "packaged_sha256": "760b2982cdb0f343d9a449daeadd73e7ac37adb088a08a416cc60ada0c367502",
+      "original_bytes": 5111,
+      "packaged_bytes": 5111,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/prototypes/exact_gap.py",
+      "source_relative_path": "exact_gap.py",
+      "original_sha256": "d0fe253c724163a78f2cf2f4b18e1d1858cdb5e3dac8833659ea600e3ec3931a",
+      "packaged_sha256": "d0fe253c724163a78f2cf2f4b18e1d1858cdb5e3dac8833659ea600e3ec3931a",
+      "original_bytes": 9008,
+      "packaged_bytes": 9008,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/single_run/ch_solution.json",
+      "source_relative_path": "ch_solution.json",
+      "original_sha256": "c77c3f0dc4161a993c520ee5dfd7c31d0938d16af2205323bd6402c0c891bd1a",
+      "packaged_sha256": "c77c3f0dc4161a993c520ee5dfd7c31d0938d16af2205323bd6402c0c891bd1a",
+      "original_bytes": 594920,
+      "packaged_bytes": 594920,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/single_run/ch_experiment.json",
+      "source_relative_path": "ch_experiment.json",
+      "original_sha256": "e19b4f6ae953aed749c235d959c43ec7349e64ede7973949dedaa92c0dbe7a31",
+      "packaged_sha256": "e19b4f6ae953aed749c235d959c43ec7349e64ede7973949dedaa92c0dbe7a31",
+      "original_bytes": 12089,
+      "packaged_bytes": 12089,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/single_run/ch_policy_table.md",
+      "source_relative_path": "ch_policy_table.md",
+      "original_sha256": "64a87d7792ccbd9b1f8de757cf11eda1d1e663e9c39c7894bc7abab0c16d6eaa",
+      "packaged_sha256": "64a87d7792ccbd9b1f8de757cf11eda1d1e663e9c39c7894bc7abab0c16d6eaa",
+      "original_bytes": 2014,
+      "packaged_bytes": 2014,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/single_run/ch_depot_sensitivity.md",
+      "source_relative_path": "ch_depot_sensitivity.md",
+      "original_sha256": "cb9a2b17065c38479c2bb4bb39ef6e5503df6e9c9a3543b77e3a2ba29c7c87ca",
+      "packaged_sha256": "cb9a2b17065c38479c2bb4bb39ef6e5503df6e9c9a3543b77e3a2ba29c7c87ca",
+      "original_bytes": 371,
+      "packaged_bytes": 371,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/single_run/ch_per_truck.csv",
+      "source_relative_path": "ch_per_truck.csv",
+      "original_sha256": "04a27601fb8405f702e562d58ece57c2fcfeb16b71ec275cf22a7788cb91875b",
+      "packaged_sha256": "04a27601fb8405f702e562d58ece57c2fcfeb16b71ec275cf22a7788cb91875b",
+      "original_bytes": 1508,
+      "packaged_bytes": 1508,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/gamma_sweep/pareto_frontier.json",
+      "source_relative_path": "pareto_frontier.json",
+      "original_sha256": "209b1c73392a6a97b73aef53509116f08dd240011f901457cb6c1e461b1b79c8",
+      "packaged_sha256": "209b1c73392a6a97b73aef53509116f08dd240011f901457cb6c1e461b1b79c8",
+      "original_bytes": 1578,
+      "packaged_bytes": 1578,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/gamma_sweep/pareto_frontier.md",
+      "source_relative_path": "pareto_frontier.md",
+      "original_sha256": "4803be62bddd349c9d15127a809f9f26d645c67eb41688d9d0f67eeced4eed55",
+      "packaged_sha256": "4803be62bddd349c9d15127a809f9f26d645c67eb41688d9d0f67eeced4eed55",
+      "original_bytes": 578,
+      "packaged_bytes": 578,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/gamma_sweep/replot_pareto_poster.py",
+      "source_relative_path": "replot_pareto_poster.py",
+      "original_sha256": "b041a8d9b056653803b866204fd7f5f408bee3b35e27b6b33d546aa91f77b960",
+      "packaged_sha256": "b041a8d9b056653803b866204fd7f5f408bee3b35e27b6b33d546aa91f77b960",
+      "original_bytes": 2919,
+      "packaged_bytes": 2919,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/robustness/robustness.py",
+      "source_relative_path": "robustness.py",
+      "original_sha256": "b5d537a1b8a391239937ff01fcf019d61bd24849c2a9e87f496ed8fb7a2aa4e2",
+      "packaged_sha256": "b5d537a1b8a391239937ff01fcf019d61bd24849c2a9e87f496ed8fb7a2aa4e2",
+      "original_bytes": 9042,
+      "packaged_bytes": 9042,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/robustness/robustness.json",
+      "source_relative_path": "robustness.json",
+      "original_sha256": "ca065c08e6773da853eab32241ab19afa5fe49fd3089313fccce9d5631e9293d",
+      "packaged_sha256": "ca065c08e6773da853eab32241ab19afa5fe49fd3089313fccce9d5631e9293d",
+      "original_bytes": 7123,
+      "packaged_bytes": 7123,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/robustness/robustness.md",
+      "source_relative_path": "robustness.md",
+      "original_sha256": "cd9e27f5ee00897849d8f19852f261d26ed1e0f93745bfe40bd9125bf6fce780",
+      "packaged_sha256": "cd9e27f5ee00897849d8f19852f261d26ed1e0f93745bfe40bd9125bf6fce780",
+      "original_bytes": 1051,
+      "packaged_bytes": 1051,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/distribution/distributional_metrics.py",
+      "source_relative_path": "distributional_metrics.py",
+      "original_sha256": "27177b7f1d542af91245d33a635dfd09f2fc1fc1c312da8531c123fba1527109",
+      "packaged_sha256": "27177b7f1d542af91245d33a635dfd09f2fc1fc1c312da8531c123fba1527109",
+      "original_bytes": 7485,
+      "packaged_bytes": 7485,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/distribution/distributional_metrics.json",
+      "source_relative_path": "distributional_metrics.json",
+      "original_sha256": "97010381b8a782f4b1b3ab3eed4b23e68cc1b7614eaef16506c354f3852e5c6f",
+      "packaged_sha256": "97010381b8a782f4b1b3ab3eed4b23e68cc1b7614eaef16506c354f3852e5c6f",
+      "original_bytes": 8308,
+      "packaged_bytes": 8308,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/distribution/distributional_metrics.md",
+      "source_relative_path": "distributional_metrics.md",
+      "original_sha256": "154385041ac1fd29ba36e326d990586754003565a6b9f9646368bb0a6ed0f66d",
+      "packaged_sha256": "154385041ac1fd29ba36e326d990586754003565a6b9f9646368bb0a6ed0f66d",
+      "original_bytes": 3075,
+      "packaged_bytes": 3075,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/distribution/fig_decile.py",
+      "source_relative_path": "fig_decile.py",
+      "original_sha256": "0660dfb283c2df3e7c0d2e0bb672445a7ccae279b8eb28eb14cab4711783e79b",
+      "packaged_sha256": "0660dfb283c2df3e7c0d2e0bb672445a7ccae279b8eb28eb14cab4711783e79b",
+      "original_bytes": 2274,
+      "packaged_bytes": 2274,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/poster_figures/fig_equity_layer.py",
+      "source_relative_path": "fig_equity_layer.py",
+      "original_sha256": "cea0ebb47cbdf14be609222b2857f2a5253e5cbd3e9fa49bc935001f71a7da55",
+      "packaged_sha256": "cea0ebb47cbdf14be609222b2857f2a5253e5cbd3e9fa49bc935001f71a7da55",
+      "original_bytes": 3768,
+      "packaged_bytes": 3768,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/poster_figures/fig_equity_layer_poster.py",
+      "source_relative_path": "fig_equity_layer_poster.py",
+      "original_sha256": "9db5018d9877f5c54ecd65e4dbf0a794a8eecb108e2c2789847433c1ff646e6b",
+      "packaged_sha256": "87922a7c0d4516ada0b80756b878201712da40cf9fec6324272bc2013a9570ef",
+      "original_bytes": 5865,
+      "packaged_bytes": 5854,
+      "changes": [
+        "Personal borough boundary path replaced with packaged relative path; archived plotting algorithm otherwise unchanged."
+      ]
+    },
+    {
+      "path": "research/experiments/poster_figures/fig_dial_poster.py",
+      "source_relative_path": "fig_dial_poster.py",
+      "original_sha256": "81484d9f3ffd2224d0d9dc2a004ed87becf2c2c4c94b68cd509a94418684a963",
+      "packaged_sha256": "81484d9f3ffd2224d0d9dc2a004ed87becf2c2c4c94b68cd509a94418684a963",
+      "original_bytes": 5625,
+      "packaged_bytes": 5625,
+      "changes": []
+    },
+    {
+      "path": "research/experiments/poster_figures/analyze_replicates.py",
+      "source_relative_path": "analyze_replicates.py",
+      "original_sha256": "32a892ec2d3cd7385cbda937808910440cf2854edea70cb40a17b1691b453f74",
+      "packaged_sha256": "32a892ec2d3cd7385cbda937808910440cf2854edea70cb40a17b1691b453f74",
+      "original_bytes": 2748,
+      "packaged_bytes": 2748,
+      "changes": []
+    }
+  ],
+  "not_duplicated": {
+    "final_instance": "data/model/instance.json",
+    "final_donor_scenarios": "data/model/donors.csv",
+    "final_cached_matrix": "data/model/travel.npz",
+    "final_replicates": "data/study/replicates.json",
+    "historical_core": "research/historical/",
+    "original_poster_figures": "poster/source/figures/"
+  },
+  "excluded": "Virtual environments, generated caches, backup variants, private handoffs/prompts, unrelated decks, redundant figure copies."
+}

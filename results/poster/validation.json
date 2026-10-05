@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "inputs_unchanged": true,
+  "input_sha256": {
+    "data/study/replicates.json": "f08f3f5f96893473653abebc699515f7fc288d7ad9258b23fe3d8914d66d4205",
+    "data/study/recipients.csv": "6f0950c8bb73befaece67361a9d8abdffce8e28d4b601d1b2529048e93b90f7e",
+    "data/model/instance.json": "280d7925fd1e9853ae587f93460bc368561f921019cea52406f826f8856e75ff",
+    "data/upstream/donor_model/data/nyc_boroughs.geojson": "1f26127f5d9bb5d05d1f9b0af83a619b625780ca8c02a6d01bb69089c4d27193",
+    "research/experiments/single_run/ch_solution.json": "c77c3f0dc4161a993c520ee5dfd7c31d0938d16af2205323bd6402c0c891bd1a",
+    "research/experiments/distribution/distributional_metrics.json": "97010381b8a782f4b1b3ab3eed4b23e68cc1b7614eaef16506c354f3852e5c6f",
+    "research/experiments/robustness/robustness.json": "ca065c08e6773da853eab32241ab19afa5fe49fd3089313fccce9d5631e9293d"
+  },
+  "saved_runs_checked": 55,
+  "saved_summary_values_checked": 385,
+  "priority_points": 528,
+  "poster_study_weight_rounding_differences": 188,
+  "distribution_modes_recomputed": [
+    "mode_A",
+    "mode_B_equal_throughput"
+  ],
+  "robustness": {
+    "worlds": 6,
+    "aggregate_values_checked": 80,
+    "rank_statements_checked": 4,
+    "scope": "Statistics of saved world summaries only; perturbed routes and solver feasibility are not revalidated."
+  },
+  "output_sha256": {
+    "distributional_reanalysis.json": "b91462f1228822b8baeb378400b6817c790b4954dffac3fdd20c287eebc2df4b",
+    "figure2_equity_dial.svg": "942cd6e331f2941c33524eaebd7ab144544c90a4a5007576b8912f315abcf720",
+    "appendix_distribution.svg": "b9f9553fb7ea11326b99b0616255afbf1293eaea0ab468ce584e5a62be286f3d",
+    "appendix_distribution.png": "eeedb6dcccb05e53becb4863a0baa85099927344c8b81a6fb013cd73e52090cf",
+    "figure2_equity_dial.png": "c69c3dfd4ba6f3b49bb7f6ebd4b151044891f939708ca79404ec6695d2a8fdd7",
+    "priority_points.csv": "f9c91f63e371c5ecccb35337e4d97803d71d962afb43b69bf2eb04bdee3ca44d",
+    "table1.csv": "16e9d0215bc991dec924db48872537099fff5ed1dfbffc481a931dfc2b738134",
+    "figure1_priority_surface.png": "9ccc361381c85400e0e651fd4b23fcba19427567058c218252063c51535c67a3",
+    "gamma_sweep.csv": "6b97585fb734e1365bb385f11d5f83a068882a2c8353ba6583dae27df32e73dd",
+    "figure1_priority_surface.svg": "cfa1e39822ca12c4dc6ba0e7b318f7dc04bf7a4a5ffcec237aa07492836069e8"
+  },
+  "scope": "Poster redraws use saved rounded summaries and stored map weights. Original bitmaps are preserved separately. Historical route feasibility is not established; earlier distribution/robustness outputs are not poster headline evidence."
+}

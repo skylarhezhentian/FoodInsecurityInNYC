@@ -1,0 +1,12 @@
+donor,site_name,category,address,lat,lon,est_lbs_yr,n_vehicles,cold_frac
+Hunts Point Produce Market,Hunts Point Produce Market,Wholesale,"1 Hunts Point Coop Market, Bronx, NY",40.8085,-73.8800,3360391,4,0.90
+Baldor Specialty Foods,Baldor Specialty Foods,Wholesale,"155 Food Center Dr, Bronx, NY",40.8128,-73.8813,2735367,4,0.80
+FreshDirect,FreshDirect,Supermarket,"2 St Anns Ave, Bronx, NY",40.8042,-73.9097,2522874,4,0.60
+Trader Joe's,TJ Union Sq (14 St),Supermarket,"142 E 14th St, New York, NY",40.7338,-73.9893,801957,1,0.50
+Trader Joe's,TJ Chelsea (6 Av),Supermarket,"675 6th Ave, New York, NY",40.7421,-73.9940,668298,1,0.50
+Trader Joe's,TJ Cobble Hill (BK),Supermarket,"130 Court St, Brooklyn, NY",40.6884,-73.9924,668298,1,0.50
+Trader Joe's,TJ Rego Park (QN),Supermarket,"90-30 Metropolitan Ave, Queens, NY",40.7106,-73.8567,534638,1,0.50
+Whole Foods Market,WF Bowery (LES),Supermarket,"95 E Houston St, New York, NY",40.7237,-73.9920,410530,1,0.55
+Whole Foods Market,WF Columbus Circle,Supermarket,"10 Columbus Cir, New York, NY",40.7681,-73.9829,410530,1,0.55
+Whole Foods Market,WF Chelsea (7 Av),Supermarket,"250 7th Ave, New York, NY",40.7456,-73.9942,341858,1,0.55
+Whole Foods Market,WF Gowanus (BK),Supermarket,"214 3rd St, Brooklyn, NY",40.6736,-73.9869,205515,1,0.55

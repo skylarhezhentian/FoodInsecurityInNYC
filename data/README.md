@@ -33,8 +33,12 @@ The original local preprocessing pipeline identifies the following sources:
 | Road distances and times | Cached estimates built with the [OSRM routing service](https://project-osrm.org/), based on OpenStreetMap road data. The original code called `router.project-osrm.org` and allowed a distance-based fallback when requests failed. |
 | Demand, fleet, donor supply, cold fractions, and delivery windows | Labeled research scenario assumptions. They are not operational records supplied by a food-rescue organization. |
 
-The larger raw geography/preprocessing inputs are not duplicated here. The local
-source material identifies public origins but does not contain a dataset-specific
+The larger public geography and preprocessing snapshots are included under
+[`upstream/`](upstream/), with code and reproduction instructions in the
+[preprocessing guide](../research/preprocessing/README.md). Unused contact,
+editing-user, and free-text fields were removed from provider exports; the
+archive manifest records those transformations. The recovered source material
+identifies public origins but does not contain a dataset-specific
 redistribution license or retrieval-date manifest. Inclusion does not grant new
 rights over third-party source material; the source terms and attribution remain
 applicable.

@@ -1,0 +1,371 @@
+{
+  "shape": {
+    "n": 12,
+    "total_lbs": 24068349.0,
+    "lognormal": {
+      "mu": 14.066141237708386,
+      "sigma": 0.952168088262626,
+      "median": 1284835.4809276748,
+      "mean": 2021708.030731606
+    },
+    "powerlaw": {
+      "alpha": 1.2516193117696748,
+      "logC": 16.15083987531282,
+      "r2": 0.904866475769326
+    },
+    "gini": 0.48392793442818477,
+    "top1_share": 0.32075831208862726,
+    "top3_share": 0.5740269513293164,
+    "cv": 1.044172046125366
+  },
+  "shape_ci": {
+    "alpha": [
+      0.7433822214248503,
+      1.507136141403776
+    ],
+    "gini": [
+      0.2837089079126342,
+      0.568314929751205
+    ],
+    "top1_share": [
+      0.1373286430360604,
+      0.4050752416971946
+    ],
+    "sigma": [
+      0.6317916604068586,
+      1.179997634329172
+    ]
+  },
+  "category_table": {
+    "Bakery": {
+      "n_known": 0,
+      "anchored_mean_lbs": null,
+      "n_tier_b": 5,
+      "rate_lbs_per_donor": 35000.0,
+      "rate_source": "prior"
+    },
+    "Caterer": {
+      "n_known": 0,
+      "anchored_mean_lbs": null,
+      "n_tier_b": 5,
+      "rate_lbs_per_donor": 20000.0,
+      "rate_source": "prior"
+    },
+    "Corporate": {
+      "n_known": 1,
+      "anchored_mean_lbs": 7720123.0,
+      "n_tier_b": 4,
+      "rate_lbs_per_donor": 120000.0,
+      "rate_source": "prior"
+    },
+    "Farms": {
+      "n_known": 0,
+      "anchored_mean_lbs": null,
+      "n_tier_b": 5,
+      "rate_lbs_per_donor": 150000.0,
+      "rate_source": "prior"
+    },
+    "Greenmarket": {
+      "n_known": 1,
+      "anchored_mean_lbs": 449493.0,
+      "n_tier_b": 0,
+      "rate_lbs_per_donor": 0.0,
+      "rate_source": "n/a"
+    },
+    "Hotels": {
+      "n_known": 0,
+      "anchored_mean_lbs": null,
+      "n_tier_b": 5,
+      "rate_lbs_per_donor": 25000.0,
+      "rate_source": "prior"
+    },
+    "Hunts Point": {
+      "n_known": 1,
+      "anchored_mean_lbs": 3360391.0,
+      "n_tier_b": 0,
+      "rate_lbs_per_donor": 0.0,
+      "rate_source": "n/a"
+    },
+    "Manufacturers": {
+      "n_known": 1,
+      "anchored_mean_lbs": 441037.0,
+      "n_tier_b": 4,
+      "rate_lbs_per_donor": 250000.0,
+      "rate_source": "prior"
+    },
+    "Nonprofit & Gov": {
+      "n_known": 0,
+      "anchored_mean_lbs": null,
+      "n_tier_b": 5,
+      "rate_lbs_per_donor": 120000.0,
+      "rate_source": "prior"
+    },
+    "Quickservice": {
+      "n_known": 1,
+      "anchored_mean_lbs": 323093.0,
+      "n_tier_b": 4,
+      "rate_lbs_per_donor": 120000.0,
+      "rate_source": "prior"
+    },
+    "Religious": {
+      "n_known": 0,
+      "anchored_mean_lbs": null,
+      "n_tier_b": 5,
+      "rate_lbs_per_donor": 10000.0,
+      "rate_source": "prior"
+    },
+    "Restaurants": {
+      "n_known": 0,
+      "anchored_mean_lbs": null,
+      "n_tier_b": 5,
+      "rate_lbs_per_donor": 15000.0,
+      "rate_source": "prior"
+    },
+    "Special Events": {
+      "n_known": 0,
+      "anchored_mean_lbs": null,
+      "n_tier_b": 5,
+      "rate_lbs_per_donor": 25000.0,
+      "rate_source": "prior"
+    },
+    "Supermarkets": {
+      "n_known": 5,
+      "anchored_mean_lbs": 1567236.6,
+      "n_tier_b": 0,
+      "rate_lbs_per_donor": 0.0,
+      "rate_source": "n/a"
+    },
+    "Wholesale": {
+      "n_known": 2,
+      "anchored_mean_lbs": 1969014.5,
+      "n_tier_b": 3,
+      "rate_lbs_per_donor": 400000.0,
+      "rate_source": "prior"
+    }
+  },
+  "reconciliation": {
+    "control_total": 90000000.0,
+    "A_published": 24068349.0,
+    "B_named_latent": 5160000.0,
+    "C_unlisted_tail": 60771651.0,
+    "gap_below_top12": 65931651.0,
+    "A_share": 0.2674261,
+    "B_share": 0.05733333333333333,
+    "C_share": 0.6752405666666667,
+    "b_scale_applied": 1.0,
+    "n_tail_flat": 3038.58255,
+    "n_tail_powerlaw": 500000,
+    "n_tail_powerlaw_diverged": true,
+    "n_donors_total_flat": 3106
+  },
+  "validation_loo": {
+    "median_abs_log_err": 0.30592357277997806,
+    "rmse_log": 0.3665291203380068,
+    "mean_ratio": 1.1047414514420375,
+    "spearman_rank_corr": 1.0
+  },
+  "validation_cross_org": {
+    "ch_top12_lbs": 24068349.0,
+    "ch_top12_value_usd": 45729863.1,
+    "fbnyc_donated_lbs": 22715407,
+    "fbnyc_donated_value_usd": 43159273.3,
+    "ch_as_pct_of_fbnyc_donated": 1.0595605440835816,
+    "usd_per_lb": 1.9
+  },
+  "transfer_demo": {
+    "total_lbs": 40000000,
+    "B_named_modelled": 37435000,
+    "C_unlisted_tail": 2565000,
+    "B_share": 0.935875,
+    "C_share": 0.064125,
+    "prior_scale_applied": 1.0,
+    "n_tail_flat": 128.25
+  },
+  "sensitivity": [
+    {
+      "control_total": 75000000,
+      "prior_scale": 0.5,
+      "tail_lbs": 15000,
+      "B": 2580000.0,
+      "C": 48351651.0,
+      "C_share": 0.64468868,
+      "n_tail_flat": 3223.4434,
+      "n_total_flat": 3290
+    },
+    {
+      "control_total": 75000000,
+      "prior_scale": 0.5,
+      "tail_lbs": 20000,
+      "B": 2580000.0,
+      "C": 48351651.0,
+      "C_share": 0.64468868,
+      "n_tail_flat": 2417.58255,
+      "n_total_flat": 2485
+    },
+    {
+      "control_total": 75000000,
+      "prior_scale": 0.5,
+      "tail_lbs": 30000,
+      "B": 2580000.0,
+      "C": 48351651.0,
+      "C_share": 0.64468868,
+      "n_tail_flat": 1611.7217,
+      "n_total_flat": 1679
+    },
+    {
+      "control_total": 75000000,
+      "prior_scale": 1.0,
+      "tail_lbs": 15000,
+      "B": 5160000.0,
+      "C": 45771651.0,
+      "C_share": 0.61028868,
+      "n_tail_flat": 3051.4434,
+      "n_total_flat": 3118
+    },
+    {
+      "control_total": 75000000,
+      "prior_scale": 1.0,
+      "tail_lbs": 20000,
+      "B": 5160000.0,
+      "C": 45771651.0,
+      "C_share": 0.61028868,
+      "n_tail_flat": 2288.58255,
+      "n_total_flat": 2356
+    },
+    {
+      "control_total": 75000000,
+      "prior_scale": 1.0,
+      "tail_lbs": 30000,
+      "B": 5160000.0,
+      "C": 45771651.0,
+      "C_share": 0.61028868,
+      "n_tail_flat": 1525.7217,
+      "n_total_flat": 1593
+    },
+    {
+      "control_total": 75000000,
+      "prior_scale": 1.5,
+      "tail_lbs": 15000,
+      "B": 7740000.0,
+      "C": 43191651.0,
+      "C_share": 0.57588868,
+      "n_tail_flat": 2879.4434,
+      "n_total_flat": 2946
+    },
+    {
+      "control_total": 75000000,
+      "prior_scale": 1.5,
+      "tail_lbs": 20000,
+      "B": 7740000.0,
+      "C": 43191651.0,
+      "C_share": 0.57588868,
+      "n_tail_flat": 2159.58255,
+      "n_total_flat": 2227
+    },
+    {
+      "control_total": 75000000,
+      "prior_scale": 1.5,
+      "tail_lbs": 30000,
+      "B": 7740000.0,
+      "C": 43191651.0,
+      "C_share": 0.57588868,
+      "n_tail_flat": 1439.7217,
+      "n_total_flat": 1507
+    },
+    {
+      "control_total": 90000000,
+      "prior_scale": 0.5,
+      "tail_lbs": 15000,
+      "B": 2580000.0,
+      "C": 63351651.0,
+      "C_share": 0.7039072333333334,
+      "n_tail_flat": 4223.4434,
+      "n_total_flat": 4290
+    },
+    {
+      "control_total": 90000000,
+      "prior_scale": 0.5,
+      "tail_lbs": 20000,
+      "B": 2580000.0,
+      "C": 63351651.0,
+      "C_share": 0.7039072333333334,
+      "n_tail_flat": 3167.58255,
+      "n_total_flat": 3235
+    },
+    {
+      "control_total": 90000000,
+      "prior_scale": 0.5,
+      "tail_lbs": 30000,
+      "B": 2580000.0,
+      "C": 63351651.0,
+      "C_share": 0.7039072333333334,
+      "n_tail_flat": 2111.7217,
+      "n_total_flat": 2179
+    },
+    {
+      "control_total": 90000000,
+      "prior_scale": 1.0,
+      "tail_lbs": 15000,
+      "B": 5160000.0,
+      "C": 60771651.0,
+      "C_share": 0.6752405666666667,
+      "n_tail_flat": 4051.4434,
+      "n_total_flat": 4118
+    },
+    {
+      "control_total": 90000000,
+      "prior_scale": 1.0,
+      "tail_lbs": 20000,
+      "B": 5160000.0,
+      "C": 60771651.0,
+      "C_share": 0.6752405666666667,
+      "n_tail_flat": 3038.58255,
+      "n_total_flat": 3106
+    },
+    {
+      "control_total": 90000000,
+      "prior_scale": 1.0,
+      "tail_lbs": 30000,
+      "B": 5160000.0,
+      "C": 60771651.0,
+      "C_share": 0.6752405666666667,
+      "n_tail_flat": 2025.7217,
+      "n_total_flat": 2093
+    },
+    {
+      "control_total": 90000000,
+      "prior_scale": 1.5,
+      "tail_lbs": 15000,
+      "B": 7740000.0,
+      "C": 58191651.0,
+      "C_share": 0.6465739,
+      "n_tail_flat": 3879.4434,
+      "n_total_flat": 3946
+    },
+    {
+      "control_total": 90000000,
+      "prior_scale": 1.5,
+      "tail_lbs": 20000,
+      "B": 7740000.0,
+      "C": 58191651.0,
+      "C_share": 0.6465739,
+      "n_tail_flat": 2909.58255,
+      "n_total_flat": 2977
+    },
+    {
+      "control_total": 90000000,
+      "prior_scale": 1.5,
+      "tail_lbs": 30000,
+      "B": 7740000.0,
+      "C": 58191651.0,
+      "C_share": 0.6465739,
+      "n_tail_flat": 1939.7217,
+      "n_total_flat": 2007
+    }
+  ],
+  "constants": {
+    "usd_per_lb_2025": 1.9,
+    "lbs_per_meal": 1.2,
+    "control_total_lbs": 90000000
+  }
+}

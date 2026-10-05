@@ -30,6 +30,10 @@ jobs:
         run: python scripts/verify_benchmark.py
       - name: Rebuild the corrected comparison figure
         run: python scripts/build_figures.py --output outputs/figures
+      - name: Verify the poster research archive
+        run: python scripts/verify_poster_archive.py
+      - name: Reproduce the poster figures and earlier analysis tables
+        run: python scripts/reproduce_poster_figures.py
       - name: Run the bounded routing example
         run: python scripts/run_routing_demo.py
       - name: Retain generated checks
@@ -38,3 +42,34 @@ jobs:
           name: reproduction-checks
           path: outputs/
           if-no-files-found: error
+
+  upstream-reproduction:
+    runs-on: ubuntu-latest
+    env:
+      MPLBACKEND: Agg
+      PYTHONDONTWRITEBYTECODE: "1"
+      PROJ_NETWORK: "OFF"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: research/preprocessing/requirements.txt
+      - name: Install preprocessing dependencies
+        run: python -m pip install -r research/preprocessing/requirements.txt
+      - name: Reproduce all four upstream stages offline
+        run: python scripts/reproduce_upstream.py --output outputs/upstream
+      - name: Reconstruct the original poster instance
+        run: |
+          python research/experiments/builders/build_instance_v1.py --origins research/experiments/scenarios/origins_ch.csv --window-mode ch_stat --shift-start 06:00 --horizon-min 840 --service-min 15 --donor-share 0.15 --vehicle-cap-lbs 2500 --out outputs/poster_instance_rebuilt.json
+          cmp outputs/poster_instance_rebuilt.json data/model/instance.json
+      - name: Retain upstream reproduction evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: upstream-reproduction
+          path: |
+            outputs/upstream/validation.json
+            outputs/upstream/logs/
+            outputs/poster_instance_rebuilt.json

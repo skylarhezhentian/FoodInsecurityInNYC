@@ -1,0 +1,69 @@
+tier,name,category,est_lbs,lo_lbs,hi_lbs,est_value_usd,source
+A,Amazon,Corporate,7720123,7720123,7720123,14668234,published
+A,Hunts Point Produce Market,Hunts Point,3360391,3360391,3360391,6384743,published
+A,Baldor Specialty Foods,Wholesale,2735367,2735367,2735367,5197197,published
+A,Trader Joe's,Supermarkets,2673191,2673191,2673191,5079063,published
+A,FreshDirect,Supermarkets,2522874,2522874,2522874,4793461,published
+A,Whole Foods Market,Supermarkets,1368433,1368433,1368433,2600023,published
+A,Jacob's Village Farm,Wholesale,1202662,1202662,1202662,2285058,published
+A,Costco,Supermarkets,691800,691800,691800,1314420,published
+A,BJ's Wholesale Club,Supermarkets,579885,579885,579885,1101782,published
+A,GrowNYC Greenmarket,Greenmarket,449493,449493,449493,854037,published
+A,4C Foods,Manufacturers,441037,441037,441037,837970,published
+A,Pret A Manger,Quickservice,323093,323093,323093,613877,published
+B,New Yorker Wholesale Bagels,Bakery,35000,17500,52500,66500,category-prior
+B,Leaven & Co./RM Bakery,Bakery,35000,17500,52500,66500,category-prior
+B,All Natural Products,Bakery,35000,17500,52500,66500,category-prior
+B,Tom Cat Bakery,Bakery,35000,17500,52500,66500,category-prior
+B,Black Seed Bagels LLC,Bakery,35000,17500,52500,66500,category-prior
+B,Cultivated,Caterer,20000,10000,30000,38000,category-prior
+B,Hello Fresh,Caterer,20000,10000,30000,38000,category-prior
+B,Worlds Fair Marina Restaurant & Banquet,Caterer,20000,10000,30000,38000,category-prior
+B,Do & Co. Catering NY,Caterer,20000,10000,30000,38000,category-prior
+B,"Borenstein Caterers, Inc.",Caterer,20000,10000,30000,38000,category-prior
+B,Compass Group,Corporate,120000,60000,180000,228000,category-prior
+B,GoPuff,Corporate,120000,60000,180000,228000,category-prior
+B,MSC Mediterranean Shipping Company (USA) Inc.,Corporate,120000,60000,180000,228000,category-prior
+B,GiveHealthy,Corporate,120000,60000,180000,228000,category-prior
+B,Nash Produce,Farms,150000,75000,225000,285000,category-prior
+B,Jackson Farming Co.,Farms,150000,75000,225000,285000,category-prior
+B,United Apple Sales LLC,Farms,150000,75000,225000,285000,category-prior
+B,Williams Farms LLC,Farms,150000,75000,225000,285000,category-prior
+B,Rogers Orchards Inc,Farms,150000,75000,225000,285000,category-prior
+B,Coca-Cola North America,Manufacturers,250000,125000,375000,475000,category-prior
+B,Bimbo Bakeries,Manufacturers,250000,125000,375000,475000,category-prior
+B,ConAgra,Manufacturers,250000,125000,375000,475000,category-prior
+B,Water Lilies Food Inc.,Manufacturers,250000,125000,375000,475000,category-prior
+B,Sharing Excess,Nonprofit & Gov,120000,60000,180000,228000,category-prior
+B,Tenmile Farm Foundation,Nonprofit & Gov,120000,60000,180000,228000,category-prior
+B,FarmLink,Nonprofit & Gov,120000,60000,180000,228000,category-prior
+B,Rethink Food,Nonprofit & Gov,120000,60000,180000,228000,category-prior
+B,Baby2Baby,Nonprofit & Gov,120000,60000,180000,228000,category-prior
+B,Paris Baguette,Quickservice,120000,60000,180000,228000,category-prior
+B,Bergen Bagels,Quickservice,120000,60000,180000,228000,category-prior
+B,Bayside Bagels & Deli,Quickservice,120000,60000,180000,228000,category-prior
+B,Dunkin' Donuts,Quickservice,120000,60000,180000,228000,category-prior
+B,"East End Temple, Food For Families",Religious,10000,5000,15000,19000,category-prior
+B,Temple Emanu-El of New York,Religious,10000,5000,15000,19000,category-prior
+B,Congregation Rodeph Sholom,Religious,10000,5000,15000,19000,category-prior
+B,Chabad of Tribeca (Soho),Religious,10000,5000,15000,19000,category-prior
+B,St. James' Church,Religious,10000,5000,15000,19000,category-prior
+B,Union Square Events,Restaurants,15000,7500,22500,28500,category-prior
+B,The Capital Grille,Restaurants,15000,7500,22500,28500,category-prior
+B,Le Bernardin,Restaurants,15000,7500,22500,28500,category-prior
+B,John's of Times Square,Restaurants,15000,7500,22500,28500,category-prior
+B,AMMA Fresh Greek,Restaurants,15000,7500,22500,28500,category-prior
+B,US Hunger,Special Events,25000,12500,37500,47500,category-prior
+B,New York Road Runners,Special Events,25000,12500,37500,47500,category-prior
+B,Canstruction,Special Events,25000,12500,37500,47500,category-prior
+B,The New York Produce Show and Conference,Special Events,25000,12500,37500,47500,category-prior
+B,Associated Supermarket Group Food Show,Special Events,25000,12500,37500,47500,category-prior
+B,Zhong Xing Produce Inc,Wholesale,400000,200000,600000,760000,category-prior
+B,Citrus World,Wholesale,400000,200000,600000,760000,category-prior
+B,Dairyland/The Chef's Warehouse,Wholesale,400000,200000,600000,760000,category-prior
+B,Marriott,Hotels,25000,12500,37500,47500,category-prior
+B,Baccarat Hotel,Hotels,25000,12500,37500,47500,category-prior
+B,Wyndham,Hotels,25000,12500,37500,47500,category-prior
+B,The New York Edition Hotel,Hotels,25000,12500,37500,47500,category-prior
+B,The Four Seasons Hotel New York,Hotels,25000,12500,37500,47500,category-prior
+C,"<unlisted tail: ~3,039 donors>",Mixed,60771651,,,115466137,residual-rake

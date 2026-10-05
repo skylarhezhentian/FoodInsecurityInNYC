@@ -1,0 +1,165 @@
+{
+  "stage": "all",
+  "runtime": {
+    "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "packages": {
+      "numpy": "2.4.6",
+      "pandas": "3.0.3",
+      "geopandas": "1.1.3",
+      "shapely": "2.1.2",
+      "pyproj": "3.7.2",
+      "pyogrio": "0.12.1",
+      "openpyxl": "3.1.5",
+      "matplotlib": "3.10.9"
+    }
+  },
+  "source_hashes": {
+    "data/upstream/foodhelp/food_help_programs.csv": "ffaa1763bbcf563aa8607fa67afd967235ff973ef8f0210268abd0eaba09dfb0",
+    "data/upstream/foodhelp/food_help_programs.geojson": "7f32ebd3ccd6ea912c13a413718116023f5bbfe39a9d95b7a336d61bfa3ca052",
+    "data/upstream/foodhelp/efap_pfred_programs.csv": "409b88bc750455ac08586aa0668f61dba93d42a18b8bcb9e8e2e1647b10f5e69",
+    "data/upstream/foodhelp/efap_pfred_programs.geojson": "b8655623b0eb4c0fddb5736b7188077f538a9b23ad3f1a415d64a72e846a6949",
+    "data/upstream/foodhelp/analysis/data/community_districts.geojson": "4bd95ec20da3dcaba4a92b396c4da49508dc92ef680f1d945a80ee32f16452c4",
+    "data/upstream/foodhelp/analysis/data/snap_cd_all_months.json": "072ba5f7ec29d34cc239bbfed1a5b881c7d4982fa75a39dfa935dcf0bc572b82",
+    "data/upstream/foodhelp/analysis/data/cd_population.json": "999277480fbc2e1169ca3818d9db3de54a7a120bb38d9689f7423205be789fe1",
+    "data/upstream/foodhelp/analysis/data/nta_2020.geojson": "4a036c53ce665a73954f260ef4f3a8c49f33d75fb2fc859fe0baf92f4b7f8af8",
+    "data/upstream/foodhelp/analysis/data/tracts_2020.geojson": "2cf430498a673e69382cce3c16603a0d635cd28e38a49ede818afcc719170e18",
+    "data/upstream/foodhelp/council_data/input/Neighborhood Prioritization Map 2025.csv": "682ba9ed91898cd27354cda59232ec30626e9b74b9d299b2f38ca0aacf38ce54",
+    "data/upstream/foodhelp/council_data/input/nyc_decennialcensusdata_2010_2020_change.xlsx": "86ef962b5dc5d8ad9529e1b7c9efc2f4ec3e36fb7aecc1e1b568721c762dc01a",
+    "data/upstream/foodhelp/analysis/output/access_e2sfca_nta.png": "8906f940d766e2a990c0c6ade4174eb398c17215b458a85b5bfc16b58fb7256f",
+    "data/upstream/foodhelp/analysis/output/bivariate_e2sfca_nta.png": "bf0143c4a9098373cbc61230eeb30de175c30f685a558be780df8489ea9fd717",
+    "data/upstream/foodhelp/analysis/output/bivariate_map_nta.png": "cd1bf09dc06a16256790a1e873b8b3011fbfd6f0b09b8500dca04f5b81897265",
+    "data/upstream/foodhelp/analysis/output/cd_summary.csv": "de9ae3a76b01ca8f0a3c9fdd3b1b6a8e31f36a652ada8ecdc096a35c855fce1a",
+    "data/upstream/foodhelp/analysis/output/equity_index_nta.png": "62483fbfbf0d83a834f13e7e300bafa8e5ebe2ce74b5fd2be362501b5162ef14",
+    "data/upstream/foodhelp/analysis/output/food_access_maps.png": "80993eb53346d7d77b981fcb64cf265240c11c72a060156426ff832f2de45acb",
+    "data/upstream/foodhelp/analysis/output/need_access_maps_nta.png": "ec9bb33f20e05b05bc76265c10c203004b3d79c56e7d979faeef70f3a4390976",
+    "data/upstream/foodhelp/analysis/output/nta_equity_index.csv": "8d3a06540672d59dd67cea866a0afcc51b31d221e3d0d00745e2202f766cff48",
+    "data/upstream/foodhelp/analysis/output/nta_summary.csv": "cdf29c44e34953a6697901784b38aca769aa8897fae9d4259a9c5319d23fd5d2",
+    "research/preprocessing/foodhelp/analysis/build_e2sfca_index.py": "19ccab3f09f0b8c27f71e68027de3100a827db92660df4a433e7db90906002da",
+    "research/preprocessing/foodhelp/analysis/build_food_access_map_nta.py": "6aae9f9a3a6fae5f8dfb7f5b06f23c825dc3bb3e7be268f9e9cf56bab21d31a1",
+    "research/preprocessing/foodhelp/analysis/build_food_access_map.py": "d884d84eb0a005009e4c9acfa7dd52b4538760d4d8e514df11973080db5bb533",
+    "research/preprocessing/foodhelp/analysis/METHODOLOGY.md": "899a3518629d2655667adab21e832146bd36d83b54dce0606154ff1b51c77941",
+    "research/preprocessing/donor_model/src/data.py": "2dfab342fe87b4c34029ccb71704ee44c5e5ac4a9c01106ed2a638e6d2adac8c",
+    "research/preprocessing/donor_model/src/donor_geo.py": "f0933bd7b78bd04225274b964bb6af2b02fa815c391e6b99a1d218ff0710bee9",
+    "research/preprocessing/donor_model/src/fig_step3.py": "b426965c903c2b5742724d351505baecdc906c724884f78a9c1a2dd461cffba1",
+    "research/preprocessing/donor_model/src/fig_step3_map.py": "420439f23dc54eadae93dd442b654d2ccdadf75fc0a990ef3cce409e1e7120ef",
+    "research/preprocessing/donor_model/src/fig_steps12.py": "c6eb65b0a10ea67a69f7f1ccceb4cfc2e8971a0c1310ce10da5775c038ab4502",
+    "research/preprocessing/donor_model/src/figures.py": "11d2bd6b17d8757745fa2c3e825f818680b085a6f4f7d258c81ff40cad6f8364",
+    "research/preprocessing/donor_model/src/figutil.py": "d5acfcd478e49659853d83c22f673599a875b664987bb97fb03f55d94762ac9a",
+    "research/preprocessing/donor_model/src/geo.py": "ba0958dba2d17d68a61d52234a763e090b8aec59023987fd65aa1b739953c131",
+    "research/preprocessing/donor_model/src/model.py": "3c7ef519a1fcc687bf4a965584b0be610cb5acb4d46339e4bb7b8b71b2373472",
+    "research/preprocessing/donor_model/src/palette.py": "77863758be9e8acdbcc6f7d3ef5106d585a780c612c038ef0264e6ccd7a7fdd8",
+    "research/preprocessing/donor_model/src/run_pipeline.py": "6359729ae29e71c24bb0a4fa7a5d2bd8de0ab33958787428504fa4f61822bfe4",
+    "research/preprocessing/donor_model/docs/composite_method.md": "5584278a656d0e9899b6ba69aa39ea1b88ba8ca671350aaed0b9ae7269979e1a",
+    "research/preprocessing/donor_model/docs/research_writeup.md": "989f3f92db5559fd985fa2c463eb29633f8d195cbea26c690dc26c66f9d390c5",
+    "research/preprocessing/donor_model/ORIGINAL_README.md": "9032a7ec620f2ad1eea8dfcf6d97fa960695fb89e4aa9b3e890e4032b67a4f6c",
+    "research/preprocessing/donor_model/figures/fig1_ranksize.png": "d7219fa20deeffa8e989227ce9703e21f64cb8fce748b25365f24c75b77cae17",
+    "research/preprocessing/donor_model/figures/fig2_lognormal_qq.png": "3e6d57fecf554d80c93f3d214edae850fde95adc6242f1dce0a43961606ce50f",
+    "research/preprocessing/donor_model/figures/fig3_decomposition.png": "da8f2ad3aa631779c14cdf08ca6734a8bf08fa4815b5dc76aa9d925da40b83cf",
+    "research/preprocessing/donor_model/figures/fig4_category.png": "c71552cd1779a2f01c4b51c6d880de5f0d0766e0f432d99d63ce683df4b7b2af",
+    "research/preprocessing/donor_model/figures/fig5_sensitivity.png": "b97a465ce04dbab51172a58ba3f8e196b62bd1ea6c8d6c292cbe0aa905ca10d6",
+    "research/preprocessing/donor_model/figures/fig6_distance_decay.png": "43ff9b8ed1d02bea3bbec9949bd553764b1d15431fb8dbb9a181f85e5ad73755",
+    "research/preprocessing/donor_model/figures/step_3_map.png": "df73230493268cbaf301ff033b0e2924502c105337ba0c21e4d95d6360e31a80",
+    "research/preprocessing/donor_model/figures/step_3_per_source.png": "5a8266cf9a62cbf3683bf2f31fb4af41b23ffdd77e0ab3162a0797512da71349",
+    "research/preprocessing/donor_model/figures/steps_1_2.png": "ea591e420fbb9daa4dd9544db1b4390f97500e97c38bba283c23f443f54be805",
+    "data/upstream/donor_model/data/nyc_boroughs.geojson": "1f26127f5d9bb5d05d1f9b0af83a619b625780ca8c02a6d01bb69089c4d27193",
+    "data/upstream/donor_model/data/per_donor_estimates.csv": "f4eda35b3c295fecc705be9d9b0414013100eb90a0c39f9f8c1ed1f1386f02d5",
+    "data/upstream/donor_model/data/results.json": "1affe4a4c551feef735d25f8902cd3f355a5e57c07bde950b139dddb5ad8fd2a",
+    "research/preprocessing/acquisition/nyc_foodhelp_scraper.py": "bcbcd4a99e718499734d1ff41726332c20539dc63f42be93b124ab265d867e64"
+  },
+  "sources_unchanged": true,
+  "commands": [
+    {
+      "stage": "community",
+      "script": "build_food_access_map.py",
+      "returncode": 0
+    },
+    {
+      "stage": "nta",
+      "script": "build_food_access_map_nta.py",
+      "returncode": 0
+    },
+    {
+      "stage": "e2sfca",
+      "script": "build_e2sfca_index.py",
+      "returncode": 0
+    },
+    {
+      "stage": "donors",
+      "script": "run_pipeline.py",
+      "returncode": 0
+    },
+    {
+      "stage": "donors",
+      "script": "figures.py",
+      "returncode": 0
+    },
+    {
+      "stage": "donors",
+      "script": "fig_steps12.py",
+      "returncode": 0
+    },
+    {
+      "stage": "donors",
+      "script": "fig_step3.py",
+      "returncode": 0
+    },
+    {
+      "stage": "donors",
+      "script": "fig_step3_map.py",
+      "returncode": 0
+    }
+  ],
+  "comparisons": {
+    "community": {
+      "saved_rows": 59,
+      "new_rows": 59,
+      "numeric_cells_compared": 531,
+      "max_absolute_difference": 0.0,
+      "difference_count": 0,
+      "differences": [],
+      "matches_at_tolerance": true,
+      "byte_identical": true
+    },
+    "nta": {
+      "saved_rows": 197,
+      "new_rows": 197,
+      "numeric_cells_compared": 1576,
+      "max_absolute_difference": 0.0,
+      "difference_count": 0,
+      "differences": [],
+      "matches_at_tolerance": true,
+      "byte_identical": true
+    },
+    "e2sfca": {
+      "saved_rows": 197,
+      "new_rows": 197,
+      "numeric_cells_compared": 1773,
+      "max_absolute_difference": 0.0,
+      "difference_count": 0,
+      "differences": [],
+      "matches_at_tolerance": true,
+      "byte_identical": true
+    },
+    "donor_table": {
+      "saved_rows": 68,
+      "new_rows": 68,
+      "numeric_cells_compared": 270,
+      "max_absolute_difference": 0.0,
+      "difference_count": 0,
+      "differences": [],
+      "matches_at_tolerance": true,
+      "byte_identical": true
+    },
+    "donor_results": {
+      "matches_at_tolerance": true,
+      "difference_count": 0,
+      "differences": []
+    }
+  },
+  "numeric_tolerance": {
+    "relative": 1e-08,
+    "absolute": 1e-10
+  },
+  "all_compared_tables_match": true,
+  "scope": "Offline replay of recovered preprocessing. Matching saved tables does not establish historical source revision identity or validate scenario assumptions."
+}

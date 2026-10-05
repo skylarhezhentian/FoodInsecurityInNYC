@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "archive_filename": "Skylar_Tian_Laidlaw_Poster.zip",
+  "archive_sha256": "b0d634b094f45073cbb5bc6329d381efacc4a3a9b5fb9588474cf9b358b0dea0",
+  "archive_bytes": 862196,
+  "source_status": "Strong source candidate: wording and all embedded raster assets match the supplied poster; PDF build not executed or certified byte-identical.",
+  "supplied_pdf_sha256": "5f7697ea4619f8c876a8d32e99e8c63af37a1fce4e452c34454a4d074cd4821a",
+  "copied_entries": {
+    "LICENSE.md": {
+      "bytes": 1133,
+      "sha256": "4599782acce497036e731d57fe05e32a1414e9f10b6d565ff6f4a79efba96707"
+    },
+    "beamercolorthemecam.sty": {
+      "bytes": 2311,
+      "sha256": "06cc2f12a17614c1a7e58cf6fa96c8310819463375a1296091a2ad3cb26aa9ff"
+    },
+    "ref.bib": {
+      "bytes": 1547,
+      "sha256": "b2c44f43c16a57854f5e4722df77ba4d0fbce62ddf1e9bad58edc7f64e17d889"
+    },
+    "poster.tex": {
+      "bytes": 21524,
+      "sha256": "a27e78890baa371692e1c238d6adcfde66c95b7b4e4d96bb64403ae0565521c9"
+    },
+    "beamercolorthemenewtheme.sty": {
+      "bytes": 692,
+      "sha256": "b465f332d7eab1fdb41a265f7bd78e3edbed9347e4a307b1f08b76f5507ab8ae"
+    },
+    "Makefile": {
+      "bytes": 158,
+      "sha256": "498a7b08b85f7cff6302c3cc57ee03674dae64c7df2a9d89ee5a0ac48a5f2395"
+    },
+    "logos/Laidlaw_Foundation_Logo.svg": {
+      "bytes": 3251,
+      "sha256": "07462e1b577de9ab91b8b609ae4756e809133aebe2c337554f08b9549f8c9d46"
+    },
+    "logos/Columbia_University_Logo-white.png": {
+      "bytes": 20796,
+      "sha256": "f02449bb34724a6919814a3acf6b4e82b9a25ccd58c7b53ac81122a59c042650"
+    },
+    "poster.bib": {
+      "bytes": 235,
+      "sha256": "f20fcfbb1faec2da7026261e6520f25b3a180e1e01ee6ac5ed0a9f57f4d1984c"
+    },
+    "beamerthemegemini.sty": {
+      "bytes": 7423,
+      "sha256": "ab86365f77cce1c97075c28c996d2532c013baebe24be4c679dd85b7e12764f7"
+    },
+    "beamercolorthememit.sty": {
+      "bytes": 1719,
+      "sha256": "342e7a0560614df0cfc4aea5afd058d1c74868e8eb31998702365879053b919c"
+    },
+    "beamercolorthemegemini.sty": {
+      "bytes": 1786,
+      "sha256": "7a89a4b93a99af0ce782946b52595c3315bea1089d0ab17266c81c9ec2b84268"
+    },
+    "figures/fig_dial_poster.png": {
+      "bytes": 275782,
+      "sha256": "7d8f23c1a7556176ecc840b70db5e17ab95ebd8c012c03deaeb8a5f64da4aa5f"
+    },
+    "figures/fig_equity_layer_poster.png": {
+      "bytes": 618321,
+      "sha256": "345aed6b2d5980aa38343bd826ebc63a84f4d9be14ea03f477143243ae4841e6"
+    },
+    ".latexmkrc": {
+      "bytes": 41,
+      "sha256": "ebb5e322d6f59644087e11c9436a20a0f4bdd9f842622b12197e6acff014a76f"
+    },
+    "beamercolorthemelabsix.sty": {
+      "bytes": 1616,
+      "sha256": "c3abd33b08706f9b7be1918f35c8f82d3578eb1ab749178eb6e50cb4f6eef592"
+    },
+    "TEMPLATE_README.md": {
+      "bytes": 3164,
+      "sha256": "0fa99464fda4276a4f2214284e9fb466d18213ffbd51a22cbeeb365ab4280cb9",
+      "source_entry": "README.md"
+    }
+  },
+  "pdf_raster_comparison": [
+    {
+      "source": "figures/fig_equity_layer_poster.png",
+      "dimensions": [
+        2533,
+        1380
+      ],
+      "pdf_image_number": 2,
+      "rgb_pixels_match": true,
+      "alpha_pixels_match": true
+    },
+    {
+      "source": "figures/fig_dial_poster.png",
+      "dimensions": [
+        2813,
+        1848
+      ],
+      "pdf_image_number": 4,
+      "rgb_pixels_match": true,
+      "alpha_pixels_match": true
+    },
+    {
+      "source": "logos/Columbia_University_Logo-white.png",
+      "dimensions": [
+        1252,
+        187
+      ],
+      "pdf_image_number": 0,
+      "rgb_pixels_match": true,
+      "alpha_pixels_match": true
+    }
+  ],
+  "copy_policy": "All archive file contents retained byte-for-byte; the original README.md is relocated to TEMPLATE_README.md. The new README.md and manifest.json are added archive documentation. No build executed."
+}

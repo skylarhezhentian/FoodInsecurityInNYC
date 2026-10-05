@@ -1,0 +1,581 @@
+{
+  "schema_version": 1,
+  "scope": "Recovered upstream source, relevant public snapshots, and saved outputs; exact historical generating revision and acquisition dates were not recorded.",
+  "records": [
+    {
+      "path": "data/upstream/foodhelp/food_help_programs.csv",
+      "source_file": "foodhelp-nyc/food_help_programs.csv",
+      "source_bytes": 260625,
+      "source_sha256": "10cd688b18e60b87bc4739a64cbc10e87ba79fbe5f7a91a2c2773de26b8f0c1d",
+      "packaged_bytes": 214716,
+      "packaged_sha256": "ffaa1763bbcf563aa8607fa67afd967235ff973ef8f0210268abd0eaba09dfb0",
+      "transformations": [
+        {
+          "operation": "remove_unused_provider_fields",
+          "fields": [
+            "org_phone",
+            "Creator",
+            "Editor",
+            "fp_notes",
+            "sk_notes",
+            "dist_location_info"
+          ],
+          "reason": "exclude organization contact phone, editing usernames and unused free text; retain all model geography, numeric, status, and opening-hour fields"
+        },
+        {
+          "operation": "serialize",
+          "format": "UTF-8 CSV with LF line endings"
+        }
+      ]
+    },
+    {
+      "path": "data/upstream/foodhelp/food_help_programs.geojson",
+      "source_file": "foodhelp-nyc/food_help_programs.geojson",
+      "source_bytes": 1421002,
+      "source_sha256": "06d0c01c6145e7be42db23f44dd6084d3ac6b02620339ef51fbac3cc45bee232",
+      "packaged_bytes": 1345649,
+      "packaged_sha256": "7f32ebd3ccd6ea912c13a413718116023f5bbfe39a9d95b7a336d61bfa3ca052",
+      "transformations": [
+        {
+          "operation": "remove_unused_provider_fields",
+          "fields": [
+            "org_phone",
+            "Creator",
+            "Editor",
+            "fp_notes",
+            "sk_notes",
+            "dist_location_info"
+          ],
+          "reason": "exclude organization contact phone, editing usernames and unused free text; retain all model geography, numeric, status, and opening-hour fields"
+        },
+        {
+          "operation": "serialize",
+          "format": "compact UTF-8 GeoJSON; feature order, geometry and remaining property values preserved"
+        }
+      ]
+    },
+    {
+      "path": "data/upstream/foodhelp/efap_pfred_programs.csv",
+      "source_file": "foodhelp-nyc/efap_pfred_programs.csv",
+      "source_bytes": 411099,
+      "source_sha256": "c5b61a6ff189d51a0293d1ba3ac5fb2ec673b31cf28605c95d576e8b8cd10c83",
+      "packaged_bytes": 318349,
+      "packaged_sha256": "409b88bc750455ac08586aa0668f61dba93d42a18b8bcb9e8e2e1647b10f5e69",
+      "transformations": [
+        {
+          "operation": "remove_unused_provider_fields",
+          "fields": [
+            "org_phone",
+            "Creator",
+            "Editor",
+            "fp_notes",
+            "sk_notes",
+            "dist_location_info"
+          ],
+          "reason": "exclude organization contact phone, editing usernames and unused free text; retain all model geography, numeric, status, and opening-hour fields"
+        },
+        {
+          "operation": "serialize",
+          "format": "UTF-8 CSV with LF line endings"
+        }
+      ]
+    },
+    {
+      "path": "data/upstream/foodhelp/efap_pfred_programs.geojson",
+      "source_file": "foodhelp-nyc/efap_pfred_programs.geojson",
+      "source_bytes": 2280539,
+      "source_sha256": "66e74af033314077785a17ca2c71c762847f75b84dccb7ed6d3b2c101e99ed4f",
+      "packaged_bytes": 2140644,
+      "packaged_sha256": "b8655623b0eb4c0fddb5736b7188077f538a9b23ad3f1a415d64a72e846a6949",
+      "transformations": [
+        {
+          "operation": "remove_unused_provider_fields",
+          "fields": [
+            "org_phone",
+            "Creator",
+            "Editor",
+            "fp_notes",
+            "sk_notes",
+            "dist_location_info"
+          ],
+          "reason": "exclude organization contact phone, editing usernames and unused free text; retain all model geography, numeric, status, and opening-hour fields"
+        },
+        {
+          "operation": "serialize",
+          "format": "compact UTF-8 GeoJSON; feature order, geometry and remaining property values preserved"
+        }
+      ]
+    },
+    {
+      "path": "data/upstream/foodhelp/analysis/data/community_districts.geojson",
+      "source_file": "foodhelp-nyc/analysis/data/community_districts.geojson",
+      "source_bytes": 3793109,
+      "source_sha256": "4bd95ec20da3dcaba4a92b396c4da49508dc92ef680f1d945a80ee32f16452c4",
+      "packaged_bytes": 3793109,
+      "packaged_sha256": "4bd95ec20da3dcaba4a92b396c4da49508dc92ef680f1d945a80ee32f16452c4",
+      "transformations": []
+    },
+    {
+      "path": "data/upstream/foodhelp/analysis/data/snap_cd_all_months.json",
+      "source_file": "foodhelp-nyc/analysis/data/snap_cd_all_months.json",
+      "source_bytes": 460560,
+      "source_sha256": "072ba5f7ec29d34cc239bbfed1a5b881c7d4982fa75a39dfa935dcf0bc572b82",
+      "packaged_bytes": 460560,
+      "packaged_sha256": "072ba5f7ec29d34cc239bbfed1a5b881c7d4982fa75a39dfa935dcf0bc572b82",
+      "transformations": []
+    },
+    {
+      "path": "data/upstream/foodhelp/analysis/data/cd_population.json",
+      "source_file": "foodhelp-nyc/analysis/data/cd_population.json",
+      "source_bytes": 12783,
+      "source_sha256": "999277480fbc2e1169ca3818d9db3de54a7a120bb38d9689f7423205be789fe1",
+      "packaged_bytes": 12783,
+      "packaged_sha256": "999277480fbc2e1169ca3818d9db3de54a7a120bb38d9689f7423205be789fe1",
+      "transformations": []
+    },
+    {
+      "path": "data/upstream/foodhelp/analysis/data/nta_2020.geojson",
+      "source_file": "foodhelp-nyc/analysis/data/nta_2020.geojson",
+      "source_bytes": 4589305,
+      "source_sha256": "4a036c53ce665a73954f260ef4f3a8c49f33d75fb2fc859fe0baf92f4b7f8af8",
+      "packaged_bytes": 4589305,
+      "packaged_sha256": "4a036c53ce665a73954f260ef4f3a8c49f33d75fb2fc859fe0baf92f4b7f8af8",
+      "transformations": []
+    },
+    {
+      "path": "data/upstream/foodhelp/analysis/data/tracts_2020.geojson",
+      "source_file": "foodhelp-nyc/analysis/data/tracts_2020.geojson",
+      "source_bytes": 7766422,
+      "source_sha256": "2cf430498a673e69382cce3c16603a0d635cd28e38a49ede818afcc719170e18",
+      "packaged_bytes": 7766422,
+      "packaged_sha256": "2cf430498a673e69382cce3c16603a0d635cd28e38a49ede818afcc719170e18",
+      "transformations": []
+    },
+    {
+      "path": "data/upstream/foodhelp/council_data/input/Neighborhood Prioritization Map 2025.csv",
+      "source_file": "foodhelp-nyc/council_data/input/Neighborhood Prioritization Map 2025.csv",
+      "source_bytes": 19906,
+      "source_sha256": "682ba9ed91898cd27354cda59232ec30626e9b74b9d299b2f38ca0aacf38ce54",
+      "packaged_bytes": 19906,
+      "packaged_sha256": "682ba9ed91898cd27354cda59232ec30626e9b74b9d299b2f38ca0aacf38ce54",
+      "transformations": []
+    },
+    {
+      "path": "data/upstream/foodhelp/council_data/input/nyc_decennialcensusdata_2010_2020_change.xlsx",
+      "source_file": "foodhelp-nyc/council_data/input/nyc_decennialcensusdata_2010_2020_change.xlsx",
+      "source_bytes": 1908897,
+      "source_sha256": "b92bf4a9267d700678a87b94ac87d3ea8f13e612e7f0846b5677ed1499c04ad6",
+      "packaged_bytes": 1516355,
+      "packaged_sha256": "86ef962b5dc5d8ad9529e1b7c9efc2f4ec3e36fb7aecc1e1b568721c762dc01a",
+      "transformations": [
+        {
+          "operation": "remove_unused_document_metadata",
+          "fields": [
+            "creator",
+            "lastModifiedBy"
+          ],
+          "zip_member": "docProps/core.xml",
+          "reason": "Remove document creator and editor usernames while preserving all workbook cells, formulas, formatting, source attribution, and other ZIP members.",
+          "unchanged_zip_members_sha256": {
+            "[Content_Types].xml": "c51690c5096838117b323abaf41fcfd917c04be68c3400cddbcd8d2f4708d79e",
+            "_rels/.rels": "73e5a29f48d5ab979eeda062493bc7e679265c1344ef936978b8becec5549497",
+            "xl/workbook.xml": "72ff237f6a00d23f5756c927ef2a6b641d585e3a7063e4a6a93fae176f201d89",
+            "xl/_rels/workbook.xml.rels": "15e353ac27ab7362603f4a0d0754a97885e8e2ce523615a3cd59b458ddcd60e9",
+            "xl/worksheets/sheet1.xml": "e5d7f9f004ffd88d7761476eef3e4fa79f8e71dc63d3c93a2ec8481e505f6df1",
+            "xl/worksheets/sheet2.xml": "ed246321998cfa5055cea99d7065efa840b2b8491e5e6cb954ca6938307dc71b",
+            "xl/theme/theme1.xml": "b16106f4229f6ece6d74426b3e73ff6a677df2908d2a06f76ef0329fa27c0282",
+            "xl/styles.xml": "f6e662e3c8c848af2ea2d0c894445c5fd7e8b3ab8cfea57acac8b283558a673d",
+            "xl/sharedStrings.xml": "cccbf46a1f1f9c2c99c724e573e53cc0e3ff796cb798844bc6a311a4355aa35b",
+            "xl/worksheets/_rels/sheet1.xml.rels": "d028f2479d57634363596495bcfd3e7dadd1d2826ba5fd9291cd7db72e7dabb7",
+            "xl/worksheets/_rels/sheet2.xml.rels": "fe0fffb5ec78558e2b46557177888c220c2b7d2389c24965089ed5618d66be54",
+            "xl/printerSettings/printerSettings1.bin": "f9bddd329fb883c6739aae368b07abf17375ceee9712706b489001a7d0ec821b",
+            "xl/printerSettings/printerSettings2.bin": "25f6b76b45842bfd334296c484e85c4b337a3aa60185496d744ff500de1833f8",
+            "docProps/app.xml": "8b1ae003d1a30edac6a7916c91e1065fc180263a4987c5ab0c6d126e7fedfa60"
+          }
+        }
+      ]
+    },
+    {
+      "path": "data/upstream/foodhelp/analysis/output/access_e2sfca_nta.png",
+      "source_file": "foodhelp-nyc/analysis/output/access_e2sfca_nta.png",
+      "source_bytes": 231013,
+      "source_sha256": "8906f940d766e2a990c0c6ade4174eb398c17215b458a85b5bfc16b58fb7256f",
+      "packaged_bytes": 231013,
+      "packaged_sha256": "8906f940d766e2a990c0c6ade4174eb398c17215b458a85b5bfc16b58fb7256f",
+      "transformations": []
+    },
+    {
+      "path": "data/upstream/foodhelp/analysis/output/bivariate_e2sfca_nta.png",
+      "source_file": "foodhelp-nyc/analysis/output/bivariate_e2sfca_nta.png",
+      "source_bytes": 257569,
+      "source_sha256": "bf0143c4a9098373cbc61230eeb30de175c30f685a558be780df8489ea9fd717",
+      "packaged_bytes": 257569,
+      "packaged_sha256": "bf0143c4a9098373cbc61230eeb30de175c30f685a558be780df8489ea9fd717",
+      "transformations": []
+    },
+    {
+      "path": "data/upstream/foodhelp/analysis/output/bivariate_map_nta.png",
+      "source_file": "foodhelp-nyc/analysis/output/bivariate_map_nta.png",
+      "source_bytes": 259537,
+      "source_sha256": "cd1bf09dc06a16256790a1e873b8b3011fbfd6f0b09b8500dca04f5b81897265",
+      "packaged_bytes": 259537,
+      "packaged_sha256": "cd1bf09dc06a16256790a1e873b8b3011fbfd6f0b09b8500dca04f5b81897265",
+      "transformations": []
+    },
+    {
+      "path": "data/upstream/foodhelp/analysis/output/cd_summary.csv",
+      "source_file": "foodhelp-nyc/analysis/output/cd_summary.csv",
+      "source_bytes": 4306,
+      "source_sha256": "de9ae3a76b01ca8f0a3c9fdd3b1b6a8e31f36a652ada8ecdc096a35c855fce1a",
+      "packaged_bytes": 4306,
+      "packaged_sha256": "de9ae3a76b01ca8f0a3c9fdd3b1b6a8e31f36a652ada8ecdc096a35c855fce1a",
+      "transformations": []
+    },
+    {
+      "path": "data/upstream/foodhelp/analysis/output/equity_index_nta.png",
+      "source_file": "foodhelp-nyc/analysis/output/equity_index_nta.png",
+      "source_bytes": 250955,
+      "source_sha256": "62483fbfbf0d83a834f13e7e300bafa8e5ebe2ce74b5fd2be362501b5162ef14",
+      "packaged_bytes": 250955,
+      "packaged_sha256": "62483fbfbf0d83a834f13e7e300bafa8e5ebe2ce74b5fd2be362501b5162ef14",
+      "transformations": []
+    },
+    {
+      "path": "data/upstream/foodhelp/analysis/output/food_access_maps.png",
+      "source_file": "foodhelp-nyc/analysis/output/food_access_maps.png",
+      "source_bytes": 401655,
+      "source_sha256": "80993eb53346d7d77b981fcb64cf265240c11c72a060156426ff832f2de45acb",
+      "packaged_bytes": 401655,
+      "packaged_sha256": "80993eb53346d7d77b981fcb64cf265240c11c72a060156426ff832f2de45acb",
+      "transformations": []
+    },
+    {
+      "path": "data/upstream/foodhelp/analysis/output/need_access_maps_nta.png",
+      "source_file": "foodhelp-nyc/analysis/output/need_access_maps_nta.png",
+      "source_bytes": 353861,
+      "source_sha256": "ec9bb33f20e05b05bc76265c10c203004b3d79c56e7d979faeef70f3a4390976",
+      "packaged_bytes": 353861,
+      "packaged_sha256": "ec9bb33f20e05b05bc76265c10c203004b3d79c56e7d979faeef70f3a4390976",
+      "transformations": []
+    },
+    {
+      "path": "data/upstream/foodhelp/analysis/output/nta_equity_index.csv",
+      "source_file": "foodhelp-nyc/analysis/output/nta_equity_index.csv",
+      "source_bytes": 26954,
+      "source_sha256": "8d3a06540672d59dd67cea866a0afcc51b31d221e3d0d00745e2202f766cff48",
+      "packaged_bytes": 26954,
+      "packaged_sha256": "8d3a06540672d59dd67cea866a0afcc51b31d221e3d0d00745e2202f766cff48",
+      "transformations": []
+    },
+    {
+      "path": "data/upstream/foodhelp/analysis/output/nta_summary.csv",
+      "source_file": "foodhelp-nyc/analysis/output/nta_summary.csv",
+      "source_bytes": 18146,
+      "source_sha256": "cdf29c44e34953a6697901784b38aca769aa8897fae9d4259a9c5319d23fd5d2",
+      "packaged_bytes": 18146,
+      "packaged_sha256": "cdf29c44e34953a6697901784b38aca769aa8897fae9d4259a9c5319d23fd5d2",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/foodhelp/analysis/build_e2sfca_index.py",
+      "source_file": "foodhelp-nyc/analysis/build_e2sfca_index.py",
+      "source_bytes": 10344,
+      "source_sha256": "19ccab3f09f0b8c27f71e68027de3100a827db92660df4a433e7db90906002da",
+      "packaged_bytes": 10344,
+      "packaged_sha256": "19ccab3f09f0b8c27f71e68027de3100a827db92660df4a433e7db90906002da",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/foodhelp/analysis/build_food_access_map_nta.py",
+      "source_file": "foodhelp-nyc/analysis/build_food_access_map_nta.py",
+      "source_bytes": 7845,
+      "source_sha256": "6aae9f9a3a6fae5f8dfb7f5b06f23c825dc3bb3e7be268f9e9cf56bab21d31a1",
+      "packaged_bytes": 7845,
+      "packaged_sha256": "6aae9f9a3a6fae5f8dfb7f5b06f23c825dc3bb3e7be268f9e9cf56bab21d31a1",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/foodhelp/analysis/build_food_access_map.py",
+      "source_file": "foodhelp-nyc/analysis/build_food_access_map.py",
+      "source_bytes": 7328,
+      "source_sha256": "d884d84eb0a005009e4c9acfa7dd52b4538760d4d8e514df11973080db5bb533",
+      "packaged_bytes": 7328,
+      "packaged_sha256": "d884d84eb0a005009e4c9acfa7dd52b4538760d4d8e514df11973080db5bb533",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/foodhelp/analysis/METHODOLOGY.md",
+      "source_file": "foodhelp-nyc/analysis/METHODOLOGY.md",
+      "source_bytes": 9815,
+      "source_sha256": "899a3518629d2655667adab21e832146bd36d83b54dce0606154ff1b51c77941",
+      "packaged_bytes": 9815,
+      "packaged_sha256": "899a3518629d2655667adab21e832146bd36d83b54dce0606154ff1b51c77941",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/donor_model/src/data.py",
+      "source_file": "foodbank-donor-model/src/data.py",
+      "source_bytes": 9087,
+      "source_sha256": "2dfab342fe87b4c34029ccb71704ee44c5e5ac4a9c01106ed2a638e6d2adac8c",
+      "packaged_bytes": 9087,
+      "packaged_sha256": "2dfab342fe87b4c34029ccb71704ee44c5e5ac4a9c01106ed2a638e6d2adac8c",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/donor_model/src/donor_geo.py",
+      "source_file": "foodbank-donor-model/src/donor_geo.py",
+      "source_bytes": 5615,
+      "source_sha256": "f0933bd7b78bd04225274b964bb6af2b02fa815c391e6b99a1d218ff0710bee9",
+      "packaged_bytes": 5615,
+      "packaged_sha256": "f0933bd7b78bd04225274b964bb6af2b02fa815c391e6b99a1d218ff0710bee9",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/donor_model/src/fig_step3.py",
+      "source_file": "foodbank-donor-model/src/fig_step3.py",
+      "source_bytes": 2257,
+      "source_sha256": "b426965c903c2b5742724d351505baecdc906c724884f78a9c1a2dd461cffba1",
+      "packaged_bytes": 2257,
+      "packaged_sha256": "b426965c903c2b5742724d351505baecdc906c724884f78a9c1a2dd461cffba1",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/donor_model/src/fig_step3_map.py",
+      "source_file": "foodbank-donor-model/src/fig_step3_map.py",
+      "source_bytes": 2868,
+      "source_sha256": "420439f23dc54eadae93dd442b654d2ccdadf75fc0a990ef3cce409e1e7120ef",
+      "packaged_bytes": 2868,
+      "packaged_sha256": "420439f23dc54eadae93dd442b654d2ccdadf75fc0a990ef3cce409e1e7120ef",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/donor_model/src/fig_steps12.py",
+      "source_file": "foodbank-donor-model/src/fig_steps12.py",
+      "source_bytes": 3473,
+      "source_sha256": "c6eb65b0a10ea67a69f7f1ccceb4cfc2e8971a0c1310ce10da5775c038ab4502",
+      "packaged_bytes": 3473,
+      "packaged_sha256": "c6eb65b0a10ea67a69f7f1ccceb4cfc2e8971a0c1310ce10da5775c038ab4502",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/donor_model/src/figures.py",
+      "source_file": "foodbank-donor-model/src/figures.py",
+      "source_bytes": 8120,
+      "source_sha256": "11d2bd6b17d8757745fa2c3e825f818680b085a6f4f7d258c81ff40cad6f8364",
+      "packaged_bytes": 8120,
+      "packaged_sha256": "11d2bd6b17d8757745fa2c3e825f818680b085a6f4f7d258c81ff40cad6f8364",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/donor_model/src/figutil.py",
+      "source_file": "foodbank-donor-model/src/figutil.py",
+      "source_bytes": 825,
+      "source_sha256": "d5acfcd478e49659853d83c22f673599a875b664987bb97fb03f55d94762ac9a",
+      "packaged_bytes": 825,
+      "packaged_sha256": "d5acfcd478e49659853d83c22f673599a875b664987bb97fb03f55d94762ac9a",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/donor_model/src/geo.py",
+      "source_file": "foodbank-donor-model/src/geo.py",
+      "source_bytes": 3390,
+      "source_sha256": "ba0958dba2d17d68a61d52234a763e090b8aec59023987fd65aa1b739953c131",
+      "packaged_bytes": 3390,
+      "packaged_sha256": "ba0958dba2d17d68a61d52234a763e090b8aec59023987fd65aa1b739953c131",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/donor_model/src/model.py",
+      "source_file": "foodbank-donor-model/src/model.py",
+      "source_bytes": 13773,
+      "source_sha256": "3c7ef519a1fcc687bf4a965584b0be610cb5acb4d46339e4bb7b8b71b2373472",
+      "packaged_bytes": 13773,
+      "packaged_sha256": "3c7ef519a1fcc687bf4a965584b0be610cb5acb4d46339e4bb7b8b71b2373472",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/donor_model/src/palette.py",
+      "source_file": "foodbank-donor-model/src/palette.py",
+      "source_bytes": 924,
+      "source_sha256": "77863758be9e8acdbcc6f7d3ef5106d585a780c612c038ef0264e6ccd7a7fdd8",
+      "packaged_bytes": 924,
+      "packaged_sha256": "77863758be9e8acdbcc6f7d3ef5106d585a780c612c038ef0264e6ccd7a7fdd8",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/donor_model/src/run_pipeline.py",
+      "source_file": "foodbank-donor-model/src/run_pipeline.py",
+      "source_bytes": 8155,
+      "source_sha256": "6359729ae29e71c24bb0a4fa7a5d2bd8de0ab33958787428504fa4f61822bfe4",
+      "packaged_bytes": 8155,
+      "packaged_sha256": "6359729ae29e71c24bb0a4fa7a5d2bd8de0ab33958787428504fa4f61822bfe4",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/donor_model/docs/composite_method.md",
+      "source_file": "foodbank-donor-model/docs/composite_method.md",
+      "source_bytes": 9912,
+      "source_sha256": "5584278a656d0e9899b6ba69aa39ea1b88ba8ca671350aaed0b9ae7269979e1a",
+      "packaged_bytes": 9912,
+      "packaged_sha256": "5584278a656d0e9899b6ba69aa39ea1b88ba8ca671350aaed0b9ae7269979e1a",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/donor_model/docs/research_writeup.md",
+      "source_file": "foodbank-donor-model/docs/research_writeup.md",
+      "source_bytes": 14802,
+      "source_sha256": "989f3f92db5559fd985fa2c463eb29633f8d195cbea26c690dc26c66f9d390c5",
+      "packaged_bytes": 14802,
+      "packaged_sha256": "989f3f92db5559fd985fa2c463eb29633f8d195cbea26c690dc26c66f9d390c5",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/donor_model/ORIGINAL_README.md",
+      "source_file": "foodbank-donor-model/README.md",
+      "source_bytes": 1849,
+      "source_sha256": "9032a7ec620f2ad1eea8dfcf6d97fa960695fb89e4aa9b3e890e4032b67a4f6c",
+      "packaged_bytes": 1849,
+      "packaged_sha256": "9032a7ec620f2ad1eea8dfcf6d97fa960695fb89e4aa9b3e890e4032b67a4f6c",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/donor_model/figures/fig1_ranksize.png",
+      "source_file": "foodbank-donor-model/figures/fig1_ranksize.png",
+      "source_bytes": 53690,
+      "source_sha256": "d7219fa20deeffa8e989227ce9703e21f64cb8fce748b25365f24c75b77cae17",
+      "packaged_bytes": 53690,
+      "packaged_sha256": "d7219fa20deeffa8e989227ce9703e21f64cb8fce748b25365f24c75b77cae17",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/donor_model/figures/fig2_lognormal_qq.png",
+      "source_file": "foodbank-donor-model/figures/fig2_lognormal_qq.png",
+      "source_bytes": 52666,
+      "source_sha256": "3e6d57fecf554d80c93f3d214edae850fde95adc6242f1dce0a43961606ce50f",
+      "packaged_bytes": 52666,
+      "packaged_sha256": "3e6d57fecf554d80c93f3d214edae850fde95adc6242f1dce0a43961606ce50f",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/donor_model/figures/fig3_decomposition.png",
+      "source_file": "foodbank-donor-model/figures/fig3_decomposition.png",
+      "source_bytes": 44310,
+      "source_sha256": "da8f2ad3aa631779c14cdf08ca6734a8bf08fa4815b5dc76aa9d925da40b83cf",
+      "packaged_bytes": 44310,
+      "packaged_sha256": "da8f2ad3aa631779c14cdf08ca6734a8bf08fa4815b5dc76aa9d925da40b83cf",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/donor_model/figures/fig4_category.png",
+      "source_file": "foodbank-donor-model/figures/fig4_category.png",
+      "source_bytes": 64002,
+      "source_sha256": "c71552cd1779a2f01c4b51c6d880de5f0d0766e0f432d99d63ce683df4b7b2af",
+      "packaged_bytes": 64002,
+      "packaged_sha256": "c71552cd1779a2f01c4b51c6d880de5f0d0766e0f432d99d63ce683df4b7b2af",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/donor_model/figures/fig5_sensitivity.png",
+      "source_file": "foodbank-donor-model/figures/fig5_sensitivity.png",
+      "source_bytes": 68660,
+      "source_sha256": "b97a465ce04dbab51172a58ba3f8e196b62bd1ea6c8d6c292cbe0aa905ca10d6",
+      "packaged_bytes": 68660,
+      "packaged_sha256": "b97a465ce04dbab51172a58ba3f8e196b62bd1ea6c8d6c292cbe0aa905ca10d6",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/donor_model/figures/fig6_distance_decay.png",
+      "source_file": "foodbank-donor-model/figures/fig6_distance_decay.png",
+      "source_bytes": 90907,
+      "source_sha256": "43ff9b8ed1d02bea3bbec9949bd553764b1d15431fb8dbb9a181f85e5ad73755",
+      "packaged_bytes": 90907,
+      "packaged_sha256": "43ff9b8ed1d02bea3bbec9949bd553764b1d15431fb8dbb9a181f85e5ad73755",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/donor_model/figures/step_3_map.png",
+      "source_file": "foodbank-donor-model/figures/step_3_map.png",
+      "source_bytes": 219751,
+      "source_sha256": "df73230493268cbaf301ff033b0e2924502c105337ba0c21e4d95d6360e31a80",
+      "packaged_bytes": 219751,
+      "packaged_sha256": "df73230493268cbaf301ff033b0e2924502c105337ba0c21e4d95d6360e31a80",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/donor_model/figures/step_3_per_source.png",
+      "source_file": "foodbank-donor-model/figures/step_3_per_source.png",
+      "source_bytes": 118097,
+      "source_sha256": "5a8266cf9a62cbf3683bf2f31fb4af41b23ffdd77e0ab3162a0797512da71349",
+      "packaged_bytes": 118097,
+      "packaged_sha256": "5a8266cf9a62cbf3683bf2f31fb4af41b23ffdd77e0ab3162a0797512da71349",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/donor_model/figures/steps_1_2.png",
+      "source_file": "foodbank-donor-model/figures/steps_1_2.png",
+      "source_bytes": 106582,
+      "source_sha256": "ea591e420fbb9daa4dd9544db1b4390f97500e97c38bba283c23f443f54be805",
+      "packaged_bytes": 106582,
+      "packaged_sha256": "ea591e420fbb9daa4dd9544db1b4390f97500e97c38bba283c23f443f54be805",
+      "transformations": []
+    },
+    {
+      "path": "data/upstream/donor_model/data/nyc_boroughs.geojson",
+      "source_file": "foodbank-donor-model/data/nyc_boroughs.geojson",
+      "source_bytes": 2669814,
+      "source_sha256": "1f26127f5d9bb5d05d1f9b0af83a619b625780ca8c02a6d01bb69089c4d27193",
+      "packaged_bytes": 2669814,
+      "packaged_sha256": "1f26127f5d9bb5d05d1f9b0af83a619b625780ca8c02a6d01bb69089c4d27193",
+      "transformations": []
+    },
+    {
+      "path": "data/upstream/donor_model/data/per_donor_estimates.csv",
+      "source_file": "foodbank-donor-model/data/per_donor_estimates.csv",
+      "source_bytes": 5078,
+      "source_sha256": "f4eda35b3c295fecc705be9d9b0414013100eb90a0c39f9f8c1ed1f1386f02d5",
+      "packaged_bytes": 5078,
+      "packaged_sha256": "f4eda35b3c295fecc705be9d9b0414013100eb90a0c39f9f8c1ed1f1386f02d5",
+      "transformations": []
+    },
+    {
+      "path": "data/upstream/donor_model/data/results.json",
+      "source_file": "foodbank-donor-model/data/results.json",
+      "source_bytes": 8783,
+      "source_sha256": "1affe4a4c551feef735d25f8902cd3f355a5e57c07bde950b139dddb5ad8fd2a",
+      "packaged_bytes": 8783,
+      "packaged_sha256": "1affe4a4c551feef735d25f8902cd3f355a5e57c07bde950b139dddb5ad8fd2a",
+      "transformations": []
+    },
+    {
+      "path": "research/preprocessing/acquisition/nyc_foodhelp_scraper.py",
+      "source_file": "nyc_foodhelp_scraper.py",
+      "source_bytes": 7882,
+      "source_sha256": "bcbcd4a99e718499734d1ff41726332c20539dc63f42be93b124ab265d867e64",
+      "packaged_bytes": 7882,
+      "packaged_sha256": "bcbcd4a99e718499734d1ff41726332c20539dc63f42be93b124ab265d867e64",
+      "transformations": []
+    }
+  ],
+  "provider_sanitization": {
+    "dropped_fields": [
+      "org_phone",
+      "Creator",
+      "Editor",
+      "fp_notes",
+      "sk_notes",
+      "dist_location_info"
+    ],
+    "row_order_preserved": true,
+    "retained_values_preserved": true
+  },
+  "omitted": [
+    {
+      "source": "foodhelp-nyc/council_data/input/older-year and EFAP export alternatives",
+      "reason": "No recovered pipeline script reads these alternate 2018/2023/2024 or legacy EFAP exports; actual consumed snapshots are included."
+    },
+    {
+      "source": "local virtual environments, caches and .DS_Store files",
+      "reason": "Machine state, not research source or inputs."
+    }
+  ]
+}

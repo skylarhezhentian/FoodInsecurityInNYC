@@ -1,0 +1,375 @@
+{
+  "args": {
+    "worlds": 6,
+    "time_limit": 12,
+    "sd_demand": 0.3,
+    "tl_lo": 0.85,
+    "tl_hi": 1.15,
+    "sd_edge": 0.12,
+    "win_sd": 20.0
+  },
+  "baseline": {
+    "unweighted": {
+      "served": 229,
+      "nw": 31.2,
+      "high": 24.6,
+      "delivered": 35204
+    },
+    "random_preference": {
+      "served": 221,
+      "nw": 32.2,
+      "high": 26.8,
+      "delivered": 35258
+    },
+    "need_only": {
+      "served": 206,
+      "nw": 37.9,
+      "high": 62.8,
+      "delivered": 35337
+    },
+    "access_only": {
+      "served": 200,
+      "nw": 41.4,
+      "high": 25.4,
+      "delivered": 34393
+    },
+    "equity": {
+      "served": 183,
+      "nw": 45.7,
+      "high": 42.2,
+      "delivered": 34537
+    }
+  },
+  "worlds": [
+    {
+      "unweighted": {
+        "served": 225,
+        "nw": 31.5,
+        "high": 24.9,
+        "delivered": 35579
+      },
+      "random_preference": {
+        "served": 235,
+        "nw": 30.3,
+        "high": 24.0,
+        "delivered": 35351
+      },
+      "need_only": {
+        "served": 195,
+        "nw": 36.8,
+        "high": 60.4,
+        "delivered": 34944
+      },
+      "access_only": {
+        "served": 185,
+        "nw": 39.3,
+        "high": 18.1,
+        "delivered": 34043
+      },
+      "equity": {
+        "served": 185,
+        "nw": 44.7,
+        "high": 42.9,
+        "delivered": 34174
+      }
+    },
+    {
+      "unweighted": {
+        "served": 242,
+        "nw": 30.3,
+        "high": 26.9,
+        "delivered": 34334
+      },
+      "random_preference": {
+        "served": 226,
+        "nw": 29.7,
+        "high": 25.5,
+        "delivered": 34452
+      },
+      "need_only": {
+        "served": 200,
+        "nw": 36.6,
+        "high": 60.0,
+        "delivered": 34991
+      },
+      "access_only": {
+        "served": 196,
+        "nw": 41.2,
+        "high": 23.3,
+        "delivered": 35569
+      },
+      "equity": {
+        "served": 203,
+        "nw": 44.4,
+        "high": 48.4,
+        "delivered": 35179
+      }
+    },
+    {
+      "unweighted": {
+        "served": 232,
+        "nw": 29.9,
+        "high": 25.3,
+        "delivered": 35456
+      },
+      "random_preference": {
+        "served": 227,
+        "nw": 30.1,
+        "high": 28.6,
+        "delivered": 35366
+      },
+      "need_only": {
+        "served": 208,
+        "nw": 37.3,
+        "high": 62.5,
+        "delivered": 35472
+      },
+      "access_only": {
+        "served": 195,
+        "nw": 42.4,
+        "high": 23.4,
+        "delivered": 35467
+      },
+      "equity": {
+        "served": 188,
+        "nw": 45.6,
+        "high": 43.9,
+        "delivered": 34982
+      }
+    },
+    {
+      "unweighted": {
+        "served": 230,
+        "nw": 31.7,
+        "high": 23.7,
+        "delivered": 35495
+      },
+      "random_preference": {
+        "served": 224,
+        "nw": 29.7,
+        "high": 28.3,
+        "delivered": 35407
+      },
+      "need_only": {
+        "served": 198,
+        "nw": 36.8,
+        "high": 62.3,
+        "delivered": 35548
+      },
+      "access_only": {
+        "served": 200,
+        "nw": 40.2,
+        "high": 23.5,
+        "delivered": 34798
+      },
+      "equity": {
+        "served": 179,
+        "nw": 45.9,
+        "high": 39.5,
+        "delivered": 34284
+      }
+    },
+    {
+      "unweighted": {
+        "served": 216,
+        "nw": 30.1,
+        "high": 23.6,
+        "delivered": 35387
+      },
+      "random_preference": {
+        "served": 211,
+        "nw": 29.6,
+        "high": 24.3,
+        "delivered": 34475
+      },
+      "need_only": {
+        "served": 192,
+        "nw": 34.8,
+        "high": 56.7,
+        "delivered": 33913
+      },
+      "access_only": {
+        "served": 184,
+        "nw": 40.9,
+        "high": 28.0,
+        "delivered": 34989
+      },
+      "equity": {
+        "served": 169,
+        "nw": 42.1,
+        "high": 42.3,
+        "delivered": 32929
+      }
+    },
+    {
+      "unweighted": {
+        "served": 229,
+        "nw": 29.4,
+        "high": 25.0,
+        "delivered": 34545
+      },
+      "random_preference": {
+        "served": 212,
+        "nw": 30.4,
+        "high": 25.3,
+        "delivered": 35145
+      },
+      "need_only": {
+        "served": 196,
+        "nw": 36.5,
+        "high": 60.9,
+        "delivered": 35499
+      },
+      "access_only": {
+        "served": 184,
+        "nw": 38.2,
+        "high": 27.3,
+        "delivered": 33065
+      },
+      "equity": {
+        "served": 180,
+        "nw": 42.5,
+        "high": 41.5,
+        "delivered": 33879
+      }
+    }
+  ],
+  "agg": {
+    "unweighted": {
+      "served": {
+        "mean": 229.0,
+        "sd": 7.8,
+        "min": 216.0,
+        "max": 242.0
+      },
+      "nw": {
+        "mean": 30.5,
+        "sd": 0.8,
+        "min": 29.4,
+        "max": 31.7
+      },
+      "high": {
+        "mean": 24.9,
+        "sd": 1.1,
+        "min": 23.6,
+        "max": 26.9
+      },
+      "delivered": {
+        "mean": 35132.7,
+        "sd": 497.2,
+        "min": 34334.0,
+        "max": 35579.0
+      }
+    },
+    "random_preference": {
+      "served": {
+        "mean": 222.5,
+        "sd": 8.5,
+        "min": 211.0,
+        "max": 235.0
+      },
+      "nw": {
+        "mean": 30.0,
+        "sd": 0.3,
+        "min": 29.6,
+        "max": 30.4
+      },
+      "high": {
+        "mean": 26.0,
+        "sd": 1.8,
+        "min": 24.0,
+        "max": 28.6
+      },
+      "delivered": {
+        "mean": 35032.7,
+        "sd": 411.0,
+        "min": 34452.0,
+        "max": 35407.0
+      }
+    },
+    "need_only": {
+      "served": {
+        "mean": 198.2,
+        "sd": 5.0,
+        "min": 192.0,
+        "max": 208.0
+      },
+      "nw": {
+        "mean": 36.5,
+        "sd": 0.8,
+        "min": 34.8,
+        "max": 37.3
+      },
+      "high": {
+        "mean": 60.5,
+        "sd": 1.9,
+        "min": 56.7,
+        "max": 62.5
+      },
+      "delivered": {
+        "mean": 35061.2,
+        "sd": 567.8,
+        "min": 33913.0,
+        "max": 35548.0
+      }
+    },
+    "access_only": {
+      "served": {
+        "mean": 190.7,
+        "sd": 6.5,
+        "min": 184.0,
+        "max": 200.0
+      },
+      "nw": {
+        "mean": 40.4,
+        "sd": 1.4,
+        "min": 38.2,
+        "max": 42.4
+      },
+      "high": {
+        "mean": 23.9,
+        "sd": 3.2,
+        "min": 18.1,
+        "max": 28.0
+      },
+      "delivered": {
+        "mean": 34655.2,
+        "sd": 868.8,
+        "min": 33065.0,
+        "max": 35569.0
+      }
+    },
+    "equity": {
+      "served": {
+        "mean": 184.0,
+        "sd": 10.4,
+        "min": 169.0,
+        "max": 203.0
+      },
+      "nw": {
+        "mean": 44.2,
+        "sd": 1.4,
+        "min": 42.1,
+        "max": 45.9
+      },
+      "high": {
+        "mean": 43.1,
+        "sd": 2.7,
+        "min": 39.5,
+        "max": 48.4
+      },
+      "delivered": {
+        "mean": 34237.8,
+        "sd": 740.2,
+        "min": 32929.0,
+        "max": 35179.0
+      }
+    }
+  },
+  "stability": {
+    "equity leads need-weighted cov": "6/6",
+    "need_only leads high-need tier cov": "6/6",
+    "equity leads high-need tier cov": "0/6",
+    "equity lowest agencies served": "4/6"
+  }
+}

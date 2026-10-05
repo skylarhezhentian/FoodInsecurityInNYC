@@ -1,0 +1,10 @@
+food_type,requires_cold,shelf_life_hours,urgency,compatible_vehicle,model_bucket,notes
+shelf_stable,no,4320,low,any,ambient,"canned/dry goods; ~180-day shelf life"
+beverage,no,2880,low,any,ambient,"shelf-stable drinks"
+bakery,usually_no,72,medium,any,ambient,"bread/pastry; stales but ambient"
+produce,sometimes,120,medium,reefer_preferred,cold,"fruit/veg; modeled as cold (most rescue produce benefits from refrigeration)"
+mixed,varies,120,medium,reefer_preferred,cold,"mixed loads routed to reefer to be safe"
+meat,yes,96,high,reefer_only,cold,"refrigerated protein"
+dairy,yes,240,high,reefer_only,cold,"milk/cheese/yogurt"
+frozen,yes,168,high,reefer_only,cold,"needs freezer; treated as reefer-only"
+prepared,yes,48,high,reefer_only,cold,"prepared meals/deli; most perishable"

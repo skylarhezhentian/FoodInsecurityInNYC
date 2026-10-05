@@ -1,5 +1,6 @@
 # Local runtimes and credentials
 .venv/
+.venv-*/
 venv/
 .env
 .env.*

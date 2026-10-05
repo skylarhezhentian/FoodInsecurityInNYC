@@ -1,0 +1,68 @@
+{
+  "scope": "Recovered June 2026 working-paper drafts and their figure dependencies; not the symposium poster source or corrected research findings.",
+  "files": [
+    {
+      "path": "research_paper.md",
+      "source_file": "research_paper.md",
+      "bytes": 51292,
+      "sha256": "639db5fa97d01522d24b94c7476752633a1b24f68e524c618c284be2a9dc4d44",
+      "transformation": "none; byte-for-byte recovered draft"
+    },
+    {
+      "path": "research_paper.tex",
+      "source_file": "research_paper.tex",
+      "bytes": 64310,
+      "sha256": "d3fac6bb7b4748d2f648c55351e0fb39872c8f76818c7c099118e4623ed29688",
+      "transformation": "none; byte-for-byte recovered draft"
+    },
+    {
+      "path": "build_tex.py",
+      "source_file": "build_tex.py",
+      "bytes": 2354,
+      "sha256": "ce9231f2985ea75d518ebd7dbac907035120080e933a4490a9d5f7d24961544a",
+      "transformation": "none; byte-for-byte recovered draft"
+    },
+    {
+      "path": "fig_equity_layer.png",
+      "source_file": "fig_equity_layer.png",
+      "bytes": 234408,
+      "sha256": "29d56002875640cbadb2aa596706fa6b16cfe893966566abaf876a2697a41df2",
+      "transformation": "none; byte-for-byte recovered draft"
+    },
+    {
+      "path": "fig_tradeoff.png",
+      "source_file": "fig_tradeoff.png",
+      "bytes": 143139,
+      "sha256": "c17d0adf0803b2a3a7743d43564b6471c86438a53eafd54effff900de12e48a4",
+      "transformation": "none; byte-for-byte recovered draft"
+    },
+    {
+      "path": "route_map_pickup.png",
+      "source_file": "route_map_pickup.png",
+      "bytes": 463621,
+      "sha256": "26b0d3e270f349a70ab6a8d78f8818ba88f98112ec80dfee6bf0c96d783bf276",
+      "transformation": "none; byte-for-byte recovered draft"
+    },
+    {
+      "path": "pareto_frontier.png",
+      "source_file": "pareto_frontier.png",
+      "bytes": 116677,
+      "sha256": "d95651aa56c9acee07090c110afec9625f3eab7663b8840c0c662ed597294439",
+      "transformation": "none; byte-for-byte recovered draft"
+    },
+    {
+      "path": "fig_blind_donations.png",
+      "source_file": "fig_blind_donations.png",
+      "bytes": 105170,
+      "sha256": "9ffa4c5c85c18eb9b018d6f4e0361c1beed0cf1eb77f75e6ee41bb053fdac88b",
+      "transformation": "none; byte-for-byte recovered draft"
+    },
+    {
+      "path": "robustness.png",
+      "source_file": "robustness.png",
+      "bytes": 115959,
+      "sha256": "233498dc18e21964a2b492774e879d7c4ad3a6a4e5d7a22e8392c3906832f9c0",
+      "transformation": "none; byte-for-byte recovered draft"
+    }
+  ]
+}

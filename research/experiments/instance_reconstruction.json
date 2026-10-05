@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "command": "python research/experiments/builders/build_instance_v1.py --origins research/experiments/scenarios/origins_ch.csv --window-mode ch_stat --shift-start 06:00 --horizon-min 840 --service-min 15 --donor-share 0.15 --vehicle-cap-lbs 2500 --out outputs/poster_instance_rebuilt.json",
+  "python_version": "3.11.14",
+  "inputs_sha256": {
+    "research/experiments/builders/build_instance.py": "90112480525853a6542118d3f915ec0a6f5835391d7fa2c7e836e499d7b0e383",
+    "research/experiments/builders/build_instance_v1.py": "3b76e2a22a0b930220cec1d4eabb3c0c3bce97260a91b576e08a921e3a392a4a",
+    "research/experiments/scenarios/origins_ch.csv": "16b1703274dc6c129cbb36e33e1951fa022db57775c182aba2dd2e8dfd6eef28",
+    "research/experiments/scenarios/donor_classes.csv": "772d12a8c7d2ce9534421221bde4e108afd4633637b4d87e554bab58203b3fc6",
+    "data/upstream/foodhelp/efap_pfred_programs.csv": "409b88bc750455ac08586aa0668f61dba93d42a18b8bcb9e8e2e1647b10f5e69",
+    "data/upstream/foodhelp/analysis/output/nta_equity_index.csv": "8d3a06540672d59dd67cea866a0afcc51b31d221e3d0d00745e2202f766cff48",
+    "data/upstream/foodhelp/analysis/data/nta_2020.geojson": "4a036c53ce665a73954f260ef4f3a8c49f33d75fb2fc859fe0baf92f4b7f8af8"
+  },
+  "reference": "data/model/instance.json",
+  "reconstructed_sha256": "280d7925fd1e9853ae587f93460bc368561f921019cea52406f826f8856e75ff",
+  "reference_sha256": "280d7925fd1e9853ae587f93460bc368561f921019cea52406f826f8856e75ff",
+  "byte_identical": true,
+  "no_solver_used": true,
+  "notes": [
+    "Source algorithms unchanged; default file locations made portable.",
+    "Curated provider snapshots omit unused contact/editor/free-text fields; all builder inputs retain original values and row order.",
+    "The published archived instance remains unchanged."
+  ]
+}

@@ -92,6 +92,22 @@ therefore a new recorded experiment, not a promise of bitwise-identical routes o
 historical result recovery. These are modeled allocations for one scenario day,
 not estimates of real operational outcomes.
 
+## Poster research archive
+
+The poster has its own [research trail](../poster/README.md). With the same root
+requirements, redraw its analytical figures and check the preserved archive:
+
+```bash
+python scripts/reproduce_poster_figures.py
+python scripts/verify_poster_archive.py
+```
+
+Generated figures and archive checks go under `outputs/`. The original poster
+PDF and its source assets stay unchanged. Earlier map and donor-model stages
+use the separate Python 3.12 environment described in the
+[preprocessing guide](../research/preprocessing/README.md); the instance
+reconstruction command is in the [experiment guide](../research/experiments/README.md).
+
 ## Test
 
 ```bash
@@ -102,7 +118,9 @@ The suite includes data hashes, recipient joins, reference weights, declared
 node order, and numerical matrix integrity. Those checks verify the included
 files and code; they cannot recover the missing historical cache provenance.
 GitHub Actions runs the suite, saved-result reanalysis, corrected-result replay,
-figure generation, and bounded routing demo.
+poster archive verification, figure generation, and bounded routing demo. A
+separate Python 3.12 job reproduces the upstream tables and reconstructs the
+original poster instance from the included source snapshots.
 It does not run the full research benchmark.
 
 ## Files and outputs
